@@ -1,0 +1,23 @@
+@import "./breakpoints";
+
+@font-face {
+  font-family: antiqueWonders;
+  src: url("../../assets/fonts/antique_wonders/antiqueWonders.otf");
+}
+
+@mixin logo {
+  font-family: antiqueWonders;
+  font-size: 24px;
+  line-height: 32px;
+  color: white;
+
+  @include tablet {
+    font-size: 33px;
+    line-height: 44px;
+  }
+
+  @include desktop {
+    font-size: 33px;
+    line-height: 44px;
+  }
+}

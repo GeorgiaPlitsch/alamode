@@ -1,0 +1,12 @@
+@import "../../styles/partials/resets";
+
+.header {
+  background-color: #498467;
+
+  &-title {
+    display: flex;
+
+    &-text {
+    }
+  }
+}

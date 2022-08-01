@@ -1,0 +1,7 @@
+@import "./breakpoints";
+@import "./fonts";
+
+h1 {
+  @include logo;
+  margin: 0;
+}
