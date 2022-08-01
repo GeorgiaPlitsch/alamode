@@ -6,8 +6,19 @@ export const getFabricInfo = async (name) => {
   if (!name) {
     return;
   }
+
   try {
     const res = await axios.get(`${apiUrl}/fabrics/${name}`);
+
+    return res.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getFabrics = async () => {
+  try {
+    const res = await axios.get(`${apiUrl}/fabrics`);
 
     return res.data;
   } catch (error) {
