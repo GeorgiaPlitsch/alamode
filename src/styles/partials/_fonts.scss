@@ -32,7 +32,7 @@
 
 @mixin logo {
   font-family: magicRetro;
-  font-size: 30px;
+  font-size: 28px;
   line-height: 36px;
   color: #e76f51;
 
@@ -52,6 +52,13 @@
   font-size: 38px;
   line-height: 56px;
   color: white;
+}
+
+@mixin section-header {
+  font-family: nesans;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 26px;
 }
 
 @mixin button {

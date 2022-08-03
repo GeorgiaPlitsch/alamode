@@ -11,6 +11,11 @@ h2 {
   margin: 0;
 }
 
+h3 {
+  @include section-header;
+  margin: 0;
+}
+
 h4 {
   @include button;
   margin: 0;

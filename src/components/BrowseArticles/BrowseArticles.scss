@@ -1,0 +1,9 @@
+@import "../../styles/partials/colours";
+@import "../../styles/partials/padding";
+
+.browse {
+  &__header {
+    @include padding-between-sections;
+    color: $alamode-darkpink;
+  }
+}

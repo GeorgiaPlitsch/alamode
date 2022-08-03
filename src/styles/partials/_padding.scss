@@ -1,5 +1,6 @@
 $padding-side-mobile: 16px;
 $padding-before-headline: 80px;
+$padding-between-sections: 24px;
 
 @mixin padding-side {
   padding-left: $padding-side-mobile;
@@ -8,4 +9,8 @@ $padding-before-headline: 80px;
 
 @mixin padding-before-headline {
   padding-top: $padding-before-headline;
+}
+
+@mixin padding-between-sections {
+  padding-top: $padding-between-sections;
 }

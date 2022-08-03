@@ -1,44 +1,6 @@
 @import "../../styles/partials/padding";
 
 .home {
-  &__hero {
-    @include padding-before-headline;
-    @include padding-side;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 100px;
-    padding-bottom: 24px;
-
-    background: linear-gradient(
-        rgba(255, 71, 15, 0.15),
-        rgba(255, 71, 15, 0.15)
-      ),
-      url(../../assets/images/factory.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    width: 100%;
-    height: 600px;
-
-    &-header {
-    }
-
-    &-button {
-      border: none;
-      outline: none;
-      background-color: #065511;
-      border-radius: 10px;
-      padding: 16px;
-      max-width: 60%;
-    }
-
-    &-down {
-      width: 32px;
-      height: 17px;
-    }
-  }
+  display: flex;
+  flex-direction: column;
 }
