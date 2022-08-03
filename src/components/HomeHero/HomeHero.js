@@ -14,7 +14,11 @@ const HomeHero = () => {
         </button>
 
         <div>
-          <img className="home__hero-down" src={downArrow}></img>
+          <img
+            className="home__hero-down"
+            src={downArrow}
+            alt="downwards arrow icon"
+          ></img>
         </div>
       </div>
     </section>
