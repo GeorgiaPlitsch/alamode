@@ -3,6 +3,7 @@
 
 .browse {
   @include padding-side;
+  padding-bottom: $padding-between-sections;
 
   &__header {
     @include padding-between-sections;
@@ -11,8 +12,8 @@
 
     &__carousel {
       &-image {
+        border-radius: 4px;
         height: 60px;
-
         object-fit: fill;
       }
     }

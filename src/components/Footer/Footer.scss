@@ -1,0 +1,25 @@
+@import "../../styles/partials/padding";
+@import "../../styles/partials/colours";
+@import "../../styles/partials/fonts";
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  //align-items: bottom;
+
+  padding-top: 20px;
+  padding-bottom: 6px;
+  padding-right: 4px;
+
+  height: 40px;
+  background-color: #fefcad;
+
+  &__text {
+    @include body-small;
+    display: flex;
+    font-size: 12px;
+    color: $alamode-orange;
+    margin: 0;
+  }
+}

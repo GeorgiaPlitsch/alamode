@@ -11,11 +11,9 @@ const BrowseArticles = (props) => {
 
     items.push(
       <Carousel.Item cols={2}>
-        <img
-          className="browse__carousel-image"
-          width="100%"
-          src={article.image}
-        />
+        <div className="browse__carousel-image">
+          <img width="100%" src={article.image} />
+        </div>
         <h4 className="browse__carousel-header">{article.title}</h4>
       </Carousel.Item>
     );
@@ -36,7 +34,15 @@ const BrowseArticles = (props) => {
     <section className="browse">
       <h3 className="browse__header">Browse articles...</h3>
 
-      <Carousel showDots dot={MyDot} cols={1} rows={1} gap={16} loop>
+      <Carousel
+        mobileBreakpoint={767}
+        showDots
+        dot={MyDot}
+        cols={1}
+        rows={1}
+        gap={16}
+        loop
+      >
         {items}
       </Carousel>
     </section>

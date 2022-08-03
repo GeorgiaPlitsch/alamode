@@ -10,7 +10,7 @@ const HomeHero = () => {
         </h2>
 
         <button className="home__hero-button">
-          <h4>THE SUSTAINIBILTY QUIZ</h4>
+          <h4>TAKE THE SUSTAINIBILTY QUIZ</h4>
         </button>
 
         <div>
