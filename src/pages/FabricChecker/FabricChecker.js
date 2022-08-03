@@ -14,6 +14,8 @@ const FabricChecker = () => {
     });
   }, []);
 
+  console.log(fabrics);
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
