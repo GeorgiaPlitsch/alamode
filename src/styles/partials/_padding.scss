@@ -1,0 +1,11 @@
+$padding-side-mobile: 16px;
+$padding-before-headline: 80px;
+
+@mixin padding-side {
+  padding-left: $padding-side-mobile;
+  padding-right: $padding-side-mobile;
+}
+
+@mixin padding-before-headline {
+  padding-top: $padding-before-headline;
+}

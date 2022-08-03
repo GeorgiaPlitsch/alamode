@@ -5,3 +5,13 @@ h1 {
   @include logo;
   margin: 0;
 }
+
+h2 {
+  @include page-header;
+  margin: 0;
+}
+
+h4 {
+  @include button;
+  margin: 0;
+}

@@ -1,4 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
 .body {
   padding: 24px;
   background-color: #fefcad;
+}
+
+.App {
+  border: solid 1px black;
 }

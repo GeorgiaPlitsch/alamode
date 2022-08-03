@@ -1,8 +1,16 @@
 @import "../../styles/partials/resets";
+@import "../../styles/partials/padding";
 
 .header {
-  background-color: #498467;
+  @include padding-side;
 
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  height: 60px;
+  background-color: white;
   &-title {
     display: flex;
 

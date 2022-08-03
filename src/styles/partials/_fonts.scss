@@ -5,11 +5,36 @@
   src: url("../../assets/fonts/antique_wonders/antiqueWonders.otf");
 }
 
+@font-face {
+  font-family: magicRetro;
+  src: url("../../assets/fonts/magic_retro/magic_retro.ttf");
+}
+
+@font-face {
+  font-family: delmonDelicate;
+  src: url("../../assets/fonts/delmon_delicate/delmon_delicate.ttf");
+}
+
+@font-face {
+  font-family: garet;
+  src: url("../../assets/fonts/garet/garet-book.ttf");
+}
+
+@font-face {
+  font-family: romelio;
+  src: url("../../assets/fonts/romelio/romelio.ttf");
+}
+
+@font-face {
+  font-family: nesans;
+  src: url("../../assets/fonts/nesans/nesans.ttf");
+}
+
 @mixin logo {
-  font-family: antiqueWonders;
-  font-size: 24px;
-  line-height: 32px;
-  color: white;
+  font-family: magicRetro;
+  font-size: 30px;
+  line-height: 36px;
+  color: #e76f51;
 
   @include tablet {
     font-size: 33px;
@@ -20,4 +45,18 @@
     font-size: 52px;
     line-height: 60px;
   }
+}
+
+@mixin page-header {
+  font-family: nesans;
+  font-size: 38px;
+  line-height: 56px;
+  color: white;
+}
+
+@mixin button {
+  font-family: nesans;
+  font-size: 16px;
+  line-height: 32px;
+  color: white;
 }
