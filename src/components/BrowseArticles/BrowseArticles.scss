@@ -2,8 +2,19 @@
 @import "../../styles/partials/padding";
 
 .browse {
+  @include padding-side;
+
   &__header {
     @include padding-between-sections;
+    padding-bottom: $padding-between-sections;
     color: $alamode-darkpink;
+
+    &__carousel {
+      &-image {
+        height: 60px;
+
+        object-fit: fill;
+      }
+    }
   }
 }
