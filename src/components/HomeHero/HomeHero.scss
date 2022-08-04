@@ -28,13 +28,17 @@
     &-header {
     }
 
+    &-link {
+      max-width: 80%;
+    }
+
     &-button {
       border: none;
       outline: none;
       background-color: $alamode-darkgreen;
       border-radius: 10px;
       padding: 16px;
-      max-width: 80%;
+      width: 100%;
       color: white;
     }
 

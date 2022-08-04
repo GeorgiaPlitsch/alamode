@@ -1,6 +1,6 @@
 import "./HomeHero.scss";
 import downArrow from "../../assets/icons/down-arrow.png";
-import Link from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const HomeHero = () => {
   return (
@@ -10,11 +10,17 @@ const HomeHero = () => {
           Start making responsible <br></br> fashion choices <br></br>today.
         </h2>
 
-        <Link to="/quiz">
+        <Link to="/quiz" className="home__hero-link">
           <button className="home__hero-button">
             <h4>TAKE THE SUSTAINIBILTY QUIZ</h4>
           </button>
         </Link>
+
+        {/* <Link to="/fabricchecker">
+          <button className="home__hero-button">
+            <h4>QUICK FABRIC CHECKER</h4>
+          </button>
+        </Link> */}
 
         <div>
           <img
