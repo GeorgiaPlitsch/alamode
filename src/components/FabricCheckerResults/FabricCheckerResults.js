@@ -18,7 +18,6 @@ const FabricCheckerResults = (props) => {
       </article>
     );
   });
-
   return <section className="results">{cards}</section>;
 };
 

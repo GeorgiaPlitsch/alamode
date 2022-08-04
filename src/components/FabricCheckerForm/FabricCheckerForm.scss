@@ -4,8 +4,7 @@
 
 .checker {
   @include padding-side;
-  padding-top: $padding-between-sections;
-  padding-bottom: $padding-between-sections;
+  @include padding-between-sections;
   background-color: $alamode-yellow;
   display: flex;
   flex-direction: column;

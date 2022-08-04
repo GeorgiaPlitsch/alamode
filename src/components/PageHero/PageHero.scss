@@ -28,12 +28,14 @@
     &-container {
       border-radius: 10px;
       padding: 16px;
-      background: rgba(231, 111, 81, 0.4);
+      background: rgba(6, 85, 17, 0.25);
     }
 
     &-header {
       align-self: flex-start;
-      text-shadow: 1px black;
+      text-shadow: -0.4px -0.4px 0 $alamode-darkpink,
+        0.4px -0.4px 0 $alamode-darkpink, -0.4px 0.4px 0 $alamode-darkpink,
+        0.4px 0.4px 0 $alamode-darkpink;
     }
 
     &-text {

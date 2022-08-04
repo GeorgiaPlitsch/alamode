@@ -5,7 +5,7 @@ const FabricCheckerForm = (props) => {
   return (
     <section className="checker">
       <h3 className="checker__heading">
-        Enter the fabric composition of an item below and then press check:
+        Enter the fabric composition of an item below:
       </h3>
       <form className="checker__form" onSubmit={props.handleSubmit}>
         <input
