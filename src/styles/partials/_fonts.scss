@@ -22,6 +22,11 @@
 }
 
 @font-face {
+  font-family: garetHeavy;
+  src: url("../../assets/fonts/garet/garet-heavy.ttf");
+}
+
+@font-face {
   font-family: romelio;
   src: url("../../assets/fonts/romelio/romelio.ttf");
 }
@@ -68,7 +73,7 @@
 }
 
 @mixin section-header-alt {
-  font-family: coolvetica;
+  font-family: garet;
   font-size: 24px;
   font-weight: 800;
   line-height: 26px;

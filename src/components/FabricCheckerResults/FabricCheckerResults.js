@@ -1,4 +1,5 @@
 import { v4 as uuid } from "uuid";
+import "./FabricCheckerResults.scss";
 
 const FabricCheckerResults = (props) => {
   const cards = [];
@@ -9,14 +10,16 @@ const FabricCheckerResults = (props) => {
     }
 
     cards.push(
-      <article key={uuid}>
-        <h3>{fabric.name}</h3>
-        <p>{fabric.information}</p>
+      <article className="results__result" key={uuid}>
+        <div className="results__result-container">
+          <h3 className="results__result-header">{fabric.name}</h3>
+          <p className="results__result-text">{fabric.information}</p>
+        </div>
       </article>
     );
   });
 
-  return <div>{cards}</div>;
+  return <section className="results">{cards}</section>;
 };
 
 export default FabricCheckerResults;
