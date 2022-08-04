@@ -3,7 +3,8 @@ import "./BrowseArticles.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper";
+import "swiper/css/navigation";
+import { Pagination, Navigation } from "swiper";
 
 const BrowseArticles = (props) => {
   const items = [];
@@ -13,7 +14,7 @@ const BrowseArticles = (props) => {
       return;
     }
     items.push(
-      <SwiperSlide>
+      <SwiperSlide className="browse__carousel-item">
         <div className="browse__carousel-image">
           <img width="100%" src={article.image} />
         </div>
@@ -28,10 +29,13 @@ const BrowseArticles = (props) => {
       <Swiper
         slidesPerView={"auto"}
         spaceBetween={24}
+        grabCursor={true}
+        freeMode={true}
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination]}
+        navigation={true}
+        modules={[Pagination, Navigation]}
         className="browse__carousel"
       >
         {items}
