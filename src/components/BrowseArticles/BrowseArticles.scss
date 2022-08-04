@@ -5,27 +5,11 @@
   @include padding-side;
   padding-bottom: $padding-between-sections;
   background-color: #fefcad;
+  height: 280px;
 
   &__header {
     @include padding-between-sections;
     padding-bottom: $padding-between-sections;
     color: $alamode-darkpink;
-
-    &__carousel {
-      &-item {
-        display: flex;
-        flex-direction: column;
-        height: 500px;
-        gap: 8px;
-        padding-bottom: 24px;
-      }
-      &-image {
-        border-radius: 10px;
-        height: 60px;
-        object-fit: fill;
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-    }
   }
 }

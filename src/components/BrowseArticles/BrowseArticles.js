@@ -14,11 +14,11 @@ const BrowseArticles = (props) => {
       return;
     }
     articles.push(
-      <SwiperSlide className="browse__carousel-item">
-        <div className="browse__carousel-image">
+      <SwiperSlide>
+        <div>
           <img width="100%" src={article.image} />
         </div>
-        <h4 className="browse__carousel-header">{article.title}</h4>
+        <h4>{article.title}</h4>
       </SwiperSlide>
     );
   });
@@ -29,7 +29,7 @@ const BrowseArticles = (props) => {
     <section className="browse">
       <h3 className="browse__header">Browse articles...</h3>
       <Swiper
-        slidesPerView={1.5}
+        slidesPerView={1.7}
         spaceBetween={24}
         grabCursor={true}
         freeMode={true}

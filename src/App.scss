@@ -3,10 +3,42 @@
 }
 
 .body {
-  padding: 24px;
   background-color: #fefcad;
 }
 
 .App {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
   border: solid 1px black;
+}
+.bm-burger-button {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  top: 25px;
+  left: 24px;
+  background-color: none;
+  border-radius: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.bm-burger-bars {
+  background: #7ad6ae;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.menu-item {
+  padding: 5px;
+  color: white;
+}
+
+// .menu-item:hover {
+//   background-color: #7ad6ae;
+// }
+
+.page-wrap {
+  overflow: hidden;
 }
