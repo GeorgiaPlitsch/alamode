@@ -1,5 +1,9 @@
 import "./BrowseArticles.scss";
-import Carousel from "better-react-carousel";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper";
 
 const BrowseArticles = (props) => {
   const items = [];
@@ -8,43 +12,30 @@ const BrowseArticles = (props) => {
     if (!article) {
       return;
     }
-
     items.push(
-      <Carousel.Item cols={2}>
+      <SwiperSlide>
         <div className="browse__carousel-image">
           <img width="100%" src={article.image} />
         </div>
         <h4 className="browse__carousel-header">{article.title}</h4>
-      </Carousel.Item>
+      </SwiperSlide>
     );
   });
-
-  const MyDot = ({ isActive }) => (
-    <span
-      style={{
-        display: "inline-block",
-        height: isActive ? "8px" : "5px",
-        width: isActive ? "8px" : "5px",
-        background: "#e76f51",
-      }}
-    ></span>
-  );
 
   return (
     <section className="browse">
       <h3 className="browse__header">Browse articles...</h3>
-
-      <Carousel
-        mobileBreakpoint={767}
-        showDots
-        dot={MyDot}
-        cols={1}
-        rows={1}
-        gap={16}
-        loop
+      <Swiper
+        slidesPerView={"auto"}
+        spaceBetween={24}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="browse__carousel"
       >
         {items}
-      </Carousel>
+      </Swiper>
     </section>
   );
 };
