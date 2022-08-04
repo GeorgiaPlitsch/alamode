@@ -11,7 +11,14 @@
   display: flex;
   flex-direction: column;
   align-content: center;
-  border: solid 1px black;
+  //border: solid 1px black;
+
+  &__menu {
+    padding-top: 10px;
+    background: white;
+    text-align: center;
+    //border-right: 2px solid $alamode-green;
+  }
 }
 
 .bm {
@@ -19,7 +26,7 @@
     position: fixed;
     width: 25px;
     height: 25px;
-    top: 25px;
+    top: 16px;
     left: 24px;
     background-color: none;
     border-radius: 2px;
@@ -31,13 +38,33 @@
     background: $alamode-darkgreen;
     padding-left: 2px;
     padding-right: 2px;
+    border-radius: 4px;
+  }
+
+  &-cross {
+    height: 24px;
+    width: 24px;
+    background: $alamode-darkpink;
+    margin-top: 6px;
   }
 }
 .menu-item {
-  padding: 5px;
-  color: white;
+  padding: 40px;
+  color: $alamode-darkgreen;
 }
 
 .page-wrap {
   overflow: hidden;
+}
+.bm-menu-wrap {
+  position: "fixed";
+  height: "100%";
+}
+
+.bm-morph-shape {
+  fill: "#373a47";
+}
+
+.bm-overlay {
+  display: none;
 }

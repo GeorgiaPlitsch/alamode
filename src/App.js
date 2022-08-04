@@ -15,17 +15,21 @@ function App() {
       <Menu pageWrapId={"page-wrap"} />
       <main id="page-wrap">
         <Menu className="App__menu">
-          <a id="home" className="menu-item" href="/">
-            Home
+          <h1>ÀLaMode</h1>
+          <a className="menu-item" href="/">
+            <h3>Home</h3>
           </a>
-          <a id="about" className="menu-item" href="/about">
-            About
+          <a className="menu-item" href="/about">
+            <h3>Fabric Composition Checker</h3>
           </a>
-          <a id="contact" className="menu-item" href="/contact">
-            Contact
+          <a className="menu-item" href="/contact">
+            <h3>Sustainability Quiz</h3>
           </a>
-          <a className="menu-item--small" href="">
-            Settings
+          <a className="menu-item" href="">
+            <h3>Articles</h3>
+          </a>
+          <a className="menu-item" href="">
+            <h3>About</h3>
           </a>
         </Menu>
         <Home />
