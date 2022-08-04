@@ -33,8 +33,8 @@ function App() {
             <h3>About</h3>
           </a>
         </Menu>
-        {/* <Home /> */}
-        <Articles />
+        <Home />
+        {/* <Articles /> */}
         {/* <FabricChecker /> */}
         <Footer />
       </main>
