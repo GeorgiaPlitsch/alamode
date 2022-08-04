@@ -18,7 +18,7 @@ const BrowseArticles = (props) => {
         <div>
           <img width="100%" src={article.image} />
         </div>
-        <h4>{article.title}</h4>
+        <h4 className="browse__carousel-title">{article.title}</h4>
       </SwiperSlide>
     );
   });
@@ -29,7 +29,7 @@ const BrowseArticles = (props) => {
     <section className="browse">
       <h3 className="browse__header">Browse articles...</h3>
       <Swiper
-        slidesPerView={1.7}
+        slidesPerView={1.2}
         spaceBetween={24}
         grabCursor={true}
         freeMode={true}

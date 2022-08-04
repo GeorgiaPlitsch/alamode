@@ -1,4 +1,5 @@
 @import "../../styles/partials/padding";
+@import "../../styles/partials/colours";
 
 .home {
   &__hero {
@@ -30,7 +31,7 @@
     &-button {
       border: none;
       outline: none;
-      background-color: #065511;
+      background-color: $alamode-darkgreen;
       border-radius: 10px;
       padding: 16px;
       max-width: 80%;

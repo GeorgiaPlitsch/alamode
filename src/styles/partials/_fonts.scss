@@ -1,4 +1,5 @@
 @import "./breakpoints";
+@import "./colours";
 
 @font-face {
   font-family: antiqueWonders;
@@ -32,9 +33,9 @@
 
 @mixin logo {
   font-family: magicRetro;
-  font-size: 28px;
+  font-size: 30px;
   line-height: 36px;
-  color: #e76f51;
+  color: $alamode-orange;
 
   @include tablet {
     font-size: 33px;

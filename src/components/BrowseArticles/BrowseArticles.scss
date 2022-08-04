@@ -4,12 +4,36 @@
 .browse {
   @include padding-side;
   padding-bottom: $padding-between-sections;
-  background-color: #fefcad;
-  height: 280px;
+  background-color: $alamode-yellow;
+  height: 340px;
 
   &__header {
     @include padding-between-sections;
     padding-bottom: $padding-between-sections;
     color: $alamode-darkpink;
+  }
+
+  &__carousel {
+    &-title {
+      padding-bottom: 20px;
+    }
+  }
+
+  .swiper {
+  }
+
+  .swiper-pagination-bullet {
+    background-color: $alamode-green;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: $alamode-darkgreen;
+  }
+  .swiper-button-next {
+    color: white;
+    padding-bottom: 20px;
+  }
+  .swiper-button-prev {
+    color: white;
+    padding-bottom: 20px;
   }
 }
