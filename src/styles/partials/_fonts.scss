@@ -31,6 +31,11 @@
   src: url("../../assets/fonts/nesans/nesans.ttf");
 }
 
+@font-face {
+  font-family: coolvetica;
+  src: url("../../assets/fonts/coolvetica/coolvetica.otf");
+}
+
 @mixin logo {
   font-family: magicRetro;
   font-size: 30px;
@@ -57,6 +62,13 @@
 
 @mixin section-header {
   font-family: nesans;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 26px;
+}
+
+@mixin section-header-alt {
+  font-family: coolvetica;
   font-size: 24px;
   font-weight: 800;
   line-height: 26px;

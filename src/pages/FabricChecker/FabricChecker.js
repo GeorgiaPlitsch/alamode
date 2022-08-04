@@ -1,4 +1,5 @@
 import * as Api from "../../Api/Api.js";
+import PageHero from "../../components/PageHero/PageHero.js";
 import FabricCheckerForm from "../../components/FabricCheckerForm/FabricCheckerForm";
 import FabricCheckerResults from "../../components/FabricCheckerResults/FabricCheckerResults";
 
@@ -34,6 +35,7 @@ const FabricChecker = () => {
 
   return (
     <section className="page">
+      <PageHero />
       <FabricCheckerForm handleSubmit={handleSubmit} />
       <FabricCheckerResults fabricDetails={selectedFabrics} />
     </section>

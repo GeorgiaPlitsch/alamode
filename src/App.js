@@ -4,12 +4,9 @@ import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
 import Articles from "./pages/Articles/Aticles";
 import Footer from "./components/Footer/Footer";
-// import FabricChecker from "./pages/FabricChecker/FabricChecker";
+import FabricChecker from "./pages/FabricChecker/FabricChecker";
 
 function App() {
-  // showSettings (event) {
-  //   event.preventDefault();
-  // };
   return (
     <div className="App">
       <Header />
@@ -33,9 +30,9 @@ function App() {
             <h3>About</h3>
           </a>
         </Menu>
-        <Home />
+        {/* <Home /> */}
         {/* <Articles /> */}
-        {/* <FabricChecker /> */}
+        <FabricChecker />
         <Footer />
       </main>
     </div>

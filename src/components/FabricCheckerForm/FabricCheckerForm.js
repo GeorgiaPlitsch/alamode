@@ -1,16 +1,15 @@
 import SubmitButton from "../SubmitButton/SubmitButton";
+import "./FabricCheckerForm.scss";
 
 const FabricCheckerForm = (props) => {
   return (
     <section className="checker">
-      <h2>Clothing fabric composition checker</h2>
-      <h3>
-        Input the composition of a clothing item here to find further details
-        and advice on the sustainibility of the product...
+      <h3 className="checker__heading">
+        Enter the fabric composition of an item below and then press check:
       </h3>
-
-      <form onSubmit={props.handleSubmit}>
+      <form className="checker__form" onSubmit={props.handleSubmit}>
         <input
+          className="checker__form-input"
           type="text"
           name="fabric1"
           placeholder="Select fabric"
@@ -25,6 +24,7 @@ const FabricCheckerForm = (props) => {
         </datalist>
 
         <input
+          className="checker__form-input"
           type="text"
           name="fabric2"
           placeholder="Select fabric"
@@ -37,6 +37,7 @@ const FabricCheckerForm = (props) => {
         </datalist>
 
         <input
+          className="checker__form-input"
           type="text"
           name="fabric3"
           placeholder="Select fabric"

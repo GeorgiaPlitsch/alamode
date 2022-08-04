@@ -1,0 +1,50 @@
+@import "../../styles/partials/padding";
+@import "../../styles/partials/colours";
+@import "../../styles/partials/fonts";
+
+.checker {
+  @include padding-side;
+  padding-top: $padding-between-sections;
+  padding-bottom: $padding-between-sections;
+  background-color: $alamode-yellow;
+  display: flex;
+  flex-direction: column;
+
+  &__heading {
+    @include section-header-alt;
+    color: $alamode-darkpink;
+    width: 80%;
+    text-align: center;
+    align-self: center;
+  }
+
+  &__form {
+    @include component-gap;
+    @include padding-between-sections;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    &-input {
+      width: 60%;
+      height: 42px;
+      border-radius: 10px;
+      border: solid 1.2px $alamode-darkpink;
+      padding-left: 16px;
+
+      ::focus-visible {
+        outline-color: $alamode-darkgreen;
+      }
+    }
+  }
+}
+
+::-webkit-input-placeholder {
+  @include button;
+  color: $alamode-darkgreen;
+}
+
+:focus-visible {
+  outline: $alamode-purple auto 1px;
+}

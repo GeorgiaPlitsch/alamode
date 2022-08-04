@@ -1,0 +1,16 @@
+@import "../../styles/partials/padding";
+@import "../../styles/partials/colours";
+
+.button {
+  @include padding-side;
+  border: none;
+  outline: none;
+  background-color: $alamode-orange;
+  border-radius: 10px;
+  height: 42px;
+  color: white;
+
+  :active {
+    background-color: $alamode-darkorange;
+  }
+}

@@ -1,0 +1,42 @@
+@import "../../styles/partials/padding";
+@import "../../styles/partials/colours";
+
+.page {
+  &__hero {
+    @include padding-before-headline;
+    @include padding-side;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    padding-bottom: 24px;
+
+    background: linear-gradient(
+        rgba(255, 71, 15, 0.15),
+        rgba(255, 71, 15, 0.15)
+      ),
+      url(../../assets/images/landfill.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 600px;
+
+    &-header {
+      align-self: flex-start;
+    }
+
+    &-text {
+      color: white;
+      width: 80%;
+    }
+
+    &-down {
+      width: 25px;
+      height: 14px;
+    }
+  }
+}

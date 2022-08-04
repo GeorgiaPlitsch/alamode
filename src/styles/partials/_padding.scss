@@ -1,6 +1,7 @@
 $padding-side-mobile: 16px;
 $padding-before-headline: 80px;
 $padding-between-sections: 24px;
+$component-gap: 16px;
 
 @mixin padding-side {
   padding-left: $padding-side-mobile;
@@ -13,4 +14,8 @@ $padding-between-sections: 24px;
 
 @mixin padding-between-sections {
   padding-top: $padding-between-sections;
+}
+
+@mixin component-gap {
+  gap: $component-gap;
 }
