@@ -4,6 +4,7 @@
 .browse {
   @include padding-side;
   padding-bottom: $padding-between-sections;
+  background-color: #fefcad;
 
   &__header {
     @include padding-between-sections;
@@ -22,6 +23,8 @@
         border-radius: 10px;
         height: 60px;
         object-fit: fill;
+        padding-left: 10px;
+        padding-right: 10px;
       }
     }
   }

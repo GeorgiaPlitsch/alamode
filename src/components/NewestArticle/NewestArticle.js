@@ -1,14 +1,22 @@
-// import "./NewestArticle.scss";
-// import React, { useState } from "react";
+import "./NewestArticle.scss";
+import React, { useState } from "react";
 
-// const NewestArticle = (props) => {
-//   console.log("articles", props.articles);
-//   return (
-//     <div className="newestArticle">
-//       <img className="newestArticle__img" src={article.image}></img>
-//       <h3 className="newestArticle__heading">{article.title}</h3>
-//     </div>
-//   );
-// };
+const NewestArticle = (props) => {
+  console.log("articles", props.allArticles);
 
-// export default NewestArticle;
+  let article = props.allArticles[0];
+  if (!article) {
+    return;
+  }
+  return (
+    <section className="newestArticle">
+      <h3 className="newestArticle__header">New...</h3>
+      <div>
+        <img className="newestArticle__img" src={article.image}></img>
+        <h5 className="newestArticle__title">{article.title}</h5>
+      </div>
+    </section>
+  );
+};
+
+export default NewestArticle;

@@ -1,7 +1,7 @@
 import * as Api from "../../Api/Api.js";
 import "./Home.scss";
 import HomeHero from "../../components/HomeHero/HomeHero";
-//import NewestArticle from "../../components/NewestArticle/NewestArticle";
+import NewestArticle from "../../components/NewestArticle/NewestArticle";
 import BrowseArticles from "../../components/BrowseArticles/BrowseArticles";
 
 import React, { useEffect, useState } from "react";
@@ -15,11 +15,10 @@ const Home = () => {
     });
   }, []);
 
-  console.log(articles);
   return (
     <>
       <HomeHero />
-      {/* <NewestArticle articles={articles} />  */}
+      <NewestArticle allArticles={articles} />
       <BrowseArticles articles={articles} />
     </>
   );

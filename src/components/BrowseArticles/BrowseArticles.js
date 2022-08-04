@@ -7,13 +7,13 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 
 const BrowseArticles = (props) => {
-  const items = [];
+  const articles = [];
 
   props.articles.forEach((article) => {
     if (!article) {
       return;
     }
-    items.push(
+    articles.push(
       <SwiperSlide className="browse__carousel-item">
         <div className="browse__carousel-image">
           <img width="100%" src={article.image} />
@@ -23,11 +23,13 @@ const BrowseArticles = (props) => {
     );
   });
 
+  articles.shift();
+
   return (
     <section className="browse">
       <h3 className="browse__header">Browse articles...</h3>
       <Swiper
-        slidesPerView={"auto"}
+        slidesPerView={1.5}
         spaceBetween={24}
         grabCursor={true}
         freeMode={true}
@@ -38,7 +40,7 @@ const BrowseArticles = (props) => {
         modules={[Pagination, Navigation]}
         className="browse__carousel"
       >
-        {items}
+        {articles}
       </Swiper>
     </section>
   );
