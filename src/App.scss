@@ -4,10 +4,12 @@
   box-sizing: border-box;
 }
 
-.body {
+body {
+  margin: 0;
 }
 
 .App {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-content: center;
