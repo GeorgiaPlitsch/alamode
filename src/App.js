@@ -2,6 +2,7 @@ import "./App.scss";
 import { slide as Menu } from "react-burger-menu";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
+import Articles from "./pages/Articles/Aticles";
 import Footer from "./components/Footer/Footer";
 // import FabricChecker from "./pages/FabricChecker/FabricChecker";
 
@@ -32,7 +33,8 @@ function App() {
             <h3>About</h3>
           </a>
         </Menu>
-        <Home />
+        {/* <Home /> */}
+        <Articles />
         {/* <FabricChecker /> */}
         <Footer />
       </main>
