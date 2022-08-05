@@ -8,6 +8,7 @@ import Home from "./pages/Home/Home";
 import Articles from "./pages/Articles/Aticles";
 import Footer from "./components/Footer/Footer";
 import FabricChecker from "./pages/FabricChecker/FabricChecker";
+import Quiz from "./pages/Quiz/Quiz";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
             <Link to="/quiz" className="menu-item">
               <h3>Sustainability Quiz</h3>
             </Link>
-            <Link to="/articles" className="menu-item" href="">
+            <Link to="/articles" className="menu-item">
               <h3>Articles</h3>
             </Link>
             <Link to="/about" className="menu-item">
@@ -39,6 +40,7 @@ function App() {
             <Redirect from="/home" to="/" />
             <Route exact path="/" component={Home} />
             <Route path="/articles" component={Articles} />
+            <Route path="/quiz" component={Quiz} />
             <Route path="/fabricchecker" component={FabricChecker} />
           </Switch>
 
