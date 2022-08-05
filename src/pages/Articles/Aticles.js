@@ -18,15 +18,15 @@ const Articles = () => {
       return;
     }
     cards.push(
-      <article>
-        <h3>{article.title}</h3>
-        <p>{article.author}</p>
-        <img src={article.image}></img>
+      <article className="articles__article">
+        <img className="articles__article-img" src={article.image}></img>
+        <h3 className="articles__article-title">{article.title}</h3>
+        {/* <p className="articles__article-description">{article.description}</p> */}
       </article>
     );
   });
 
-  return <div>{cards}</div>;
+  return <div className="articles">{cards}</div>;
 };
 
 export default Articles;
