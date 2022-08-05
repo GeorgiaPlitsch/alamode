@@ -7,13 +7,14 @@ const Quiz = () => {
   const [questions, setQuestions] = useState([]);
 
   useEffect(() => {
+    console.log("useeffect");
     Api.getQuestions().then((result) => {
       setQuestions(result);
     });
   }, []);
 
-  if (!questions) {
-    return;
+  if (questions.length === 0) {
+    return <div>LOADING...</div>;
   }
 
   return (

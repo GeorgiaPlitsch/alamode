@@ -21,9 +21,15 @@ const QuizSlides = (props) => {
     }
   };
 
-  console.log(questions);
-  console.log(currentQuestion);
-  console.log(questions[currentQuestion].questionText);
+  console.log("questions", questions);
+  console.log("current question", currentQuestion);
+  console.log("current quation text", questions[currentQuestion].questionText);
+
+  const answers = questions[currentQuestion].answers.map((answer) => (
+    <button onClick={() => handleAnswerClick(answer.answerScore)}>
+      {answer.answerText}
+    </button>
+  ));
 
   return (
     <div className="quiz">
@@ -39,14 +45,7 @@ const QuizSlides = (props) => {
               {questions[currentQuestion].questionText}
             </div>
           </div>
-          <div className="quiz__answer-section">
-            {questions[currentQuestion].answers.map((answer) => (
-              // <button onClick={() => handleAnswerClick(answer.answerScore)}>
-              //   {answer.answerText}
-              // </button>
-              <button>{answer.answerText}</button>
-            ))}
-          </div>
+          <div className="quiz__answer-section">{answers}</div>
         </>
       )}
     </div>
