@@ -36,9 +36,19 @@ export const getArticles = async () => {
   }
 };
 
-export const getQuestions = async () => {
+export const getScoredQuestions = async () => {
   try {
-    const res = await axios.get(`${apiUrl}/quiz`);
+    const res = await axios.get(`${apiUrl}/quiz/scored`);
+
+    return res.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getRecQuestions = async () => {
+  try {
+    const res = await axios.get(`${apiUrl}/quiz/rec`);
 
     return res.data;
   } catch (error) {

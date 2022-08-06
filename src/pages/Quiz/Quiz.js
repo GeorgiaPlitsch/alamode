@@ -1,25 +1,35 @@
 import "./Quiz.scss";
 import * as Api from "../../Api/Api.js";
 import React, { useEffect, useState } from "react";
-import QuizSlides from "../../components/QuizSlides/QuizSlides";
+import ScoredQuizSlides from "../../components/QuizSlides/ScoredQuizSlides";
 
 const Quiz = () => {
-  const [questions, setQuestions] = useState([]);
+  const [scoredQuestions, setScoredQuestions] = useState([]);
+  const [recQuestions, setRecQuestions] = useState([]);
 
   useEffect(() => {
     console.log("useeffect");
-    Api.getQuestions().then((result) => {
-      setQuestions(result);
+    Api.getScoredQuestions().then((result) => {
+      setScoredQuestions(result);
     });
   }, []);
 
-  if (questions.length === 0) {
+  useEffect(() => {
+    Api.getRecQuestions().then((result) => {
+      setRecQuestions(result);
+    });
+  }, []);
+
+  if (scoredQuestions.length === 0) {
     return <div>LOADING...</div>;
   }
 
   return (
     <>
-      <QuizSlides questions={questions} />
+      <ScoredQuizSlides
+        questions={scoredQuestions}
+        recQuestions={recQuestions}
+      />
     </>
   );
 };
