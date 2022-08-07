@@ -1,15 +1,15 @@
-import "./PageHero.scss";
+import "./FabricPageHero.scss";
 import downArrow from "../../assets/icons/down-arrow.png";
 
-const PageHero = () => {
+const FabricPageHero = () => {
   return (
-    <section className="page">
-      <div className="page__hero">
-        <h2 className="page__hero-header">
+    <>
+      <div className="fabricHero">
+        <h2 className="fabricHero__header">
           Clothing fabric <br></br> composition <br></br>checker
         </h2>
-        <div className="page__hero-container">
-          <h4 className="page__hero-text">
+        <div className="fabricHero__container">
+          <h4 className="fabricHero__text">
             A quick, easy tool so you can make informed decisions before making
             your next fashion purchase. Input the composition of a clothing item
             below to find further details and advice on the sustainibility of
@@ -19,14 +19,14 @@ const PageHero = () => {
 
         <div>
           <img
-            className="page__hero-down"
+            className="fabricHero__down"
             src={downArrow}
             alt="downwards arrow icon"
           ></img>
         </div>
       </div>
-    </section>
+    </>
   );
 };
 
-export default PageHero;
+export default FabricPageHero;

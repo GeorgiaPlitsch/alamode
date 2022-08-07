@@ -1,6 +1,7 @@
 import "./Quiz.scss";
 import * as Api from "../../Api/Api.js";
 import React, { useEffect, useState } from "react";
+import QuizPageHero from "../../components/QuizPageHero/QuizPageHero";
 import ScoredQuizSlides from "../../components/QuizSlides/ScoredQuizSlides";
 
 const Quiz = () => {
@@ -25,6 +26,7 @@ const Quiz = () => {
 
   return (
     <>
+      <QuizPageHero />
       <ScoredQuizSlides
         questions={scoredQuestions}
         recQuestions={recQuestions}
