@@ -1,3 +1,5 @@
+import ArticleCard from "../../components/ArticleCard/ArticleCard";
+import { v4 as uuid } from "uuid";
 import "./Articles.scss";
 import * as Api from "../../Api/Api.js";
 import React, { useEffect, useState } from "react";
@@ -17,13 +19,7 @@ const Articles = () => {
     if (!articles) {
       return;
     }
-    cards.push(
-      <article className="articles__article">
-        <img className="articles__article-img" src={article.image}></img>
-        <h3 className="articles__article-title">{article.title}</h3>
-        {/* <p className="articles__article-description">{article.description}</p> */}
-      </article>
-    );
+    cards.push(<ArticleCard key={uuid()} article={article} />);
   });
 
   return <div className="articles">{cards}</div>;

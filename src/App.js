@@ -5,7 +5,8 @@ import "./App.scss";
 import { slide as Menu } from "react-burger-menu";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
-import Articles from "./pages/Articles/Aticles";
+import Articles from "./pages/Articles/Articles";
+import Article from "./pages/Article/Article";
 import Footer from "./components/Footer/Footer";
 import FabricChecker from "./pages/FabricChecker/FabricChecker";
 import Quiz from "./pages/Quiz/Quiz";
@@ -39,7 +40,8 @@ function App() {
           <Switch>
             <Redirect from="/home" to="/" />
             <Route exact path="/" component={Home} />
-            <Route path="/articles" component={Articles} />
+            <Route exact path="/articles" component={Articles} />
+            <Route path="/articles/:id" component={Article} />
             <Route path="/quiz" component={Quiz} />
             <Route path="/fabricchecker" component={FabricChecker} />
           </Switch>

@@ -9,24 +9,4 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  &__article {
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    background-color: $alamode-yellow;
-    padding: 16px;
-    border-radius: 4px;
-
-    &-title {
-      font-size: 16px;
-    }
-
-    &-img {
-      width: 100%;
-      max-height: 150px;
-      border-radius: 4px;
-      aspect-ratio: 16/9;
-    }
-  }
 }
