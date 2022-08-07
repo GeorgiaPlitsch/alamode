@@ -8,7 +8,6 @@ const Quiz = () => {
   const [recQuestions, setRecQuestions] = useState([]);
 
   useEffect(() => {
-    console.log("useeffect");
     Api.getScoredQuestions().then((result) => {
       setScoredQuestions(result);
     });

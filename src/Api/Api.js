@@ -22,6 +22,16 @@ export const getArticles = async () => {
   }
 };
 
+export const getArticle = async (article) => {
+  try {
+    const res = await axios.get(`${apiUrl}/articles/${article}`);
+
+    return res.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const getScoredQuestions = async () => {
   try {
     const res = await axios.get(`${apiUrl}/quiz/scored`);
