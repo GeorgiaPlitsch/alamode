@@ -2,8 +2,6 @@ import "./NewestArticle.scss";
 import React, { useState } from "react";
 
 const NewestArticle = (props) => {
-  console.log("articles", props.allArticles);
-
   let article = props.allArticles[0];
   if (!article) {
     return;

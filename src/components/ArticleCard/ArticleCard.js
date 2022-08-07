@@ -6,7 +6,6 @@ import { v4 as uuid } from "uuid";
 const ArticleCard = (props) => {
   const article = props.article;
   const articleId = article.id;
-  console.log(articleId);
 
   return (
     <article className="articleCard">

@@ -1,6 +1,7 @@
 import "./BrowseArticles.scss";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { v4 as uuid } from "uuid";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -14,7 +15,7 @@ const BrowseArticles = (props) => {
       return;
     }
     articles.push(
-      <SwiperSlide>
+      <SwiperSlide key={uuid()}>
         <Link to={`/articles/${article.id}`}>
           <div>
             <img width="100%" src={article.image} />
