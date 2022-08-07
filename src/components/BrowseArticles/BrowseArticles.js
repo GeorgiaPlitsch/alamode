@@ -1,5 +1,5 @@
 import "./BrowseArticles.scss";
-
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -15,10 +15,12 @@ const BrowseArticles = (props) => {
     }
     articles.push(
       <SwiperSlide>
-        <div>
-          <img width="100%" src={article.image} />
-        </div>
-        <h4 className="browse__carousel-title">{article.title}</h4>
+        <Link to={`/articles/${article.id}`}>
+          <div>
+            <img width="100%" src={article.image} />
+          </div>
+          <h4 className="browse__carousel-title">{article.title}</h4>
+        </Link>
       </SwiperSlide>
     );
   });

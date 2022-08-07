@@ -6,11 +6,35 @@
   margin-top: 60px;
   @include padding-side;
 
+  &__header {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: flex-start;
+    // padding-right: $padding-side-mobile;
+  }
+
+  &__body {
+    @include component-gap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__back {
+    width: 20px;
+    padding-top: 24px;
+  }
   &__title {
     color: $alamode-darkgreen;
     width: 100%;
   }
+
   &__image {
     width: 100%;
+  }
+
+  &__text {
+    @include padding-side;
   }
 }

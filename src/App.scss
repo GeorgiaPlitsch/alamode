@@ -1,5 +1,12 @@
 @import "./styles/partials/colours";
 
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
 * {
   box-sizing: border-box;
 }

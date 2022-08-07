@@ -10,7 +10,7 @@ const FabricCheckerResults = (props) => {
     }
 
     cards.push(
-      <article className="results__result" key={uuid}>
+      <article className="results__result" key={uuid()}>
         <div className="results__result-container">
           <h3 className="results__result-header">{fabric.name}</h3>
           <p className="results__result-text">{fabric.information}</p>
