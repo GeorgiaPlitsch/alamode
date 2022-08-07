@@ -2,20 +2,6 @@ import axios from "axios";
 
 const apiUrl = "http://localhost:8080/api";
 
-// export const getFabricInfo = async (name) => {
-//   if (!name) {
-//     return;
-//   }
-
-//   try {
-//     const res = await axios.get(`${apiUrl}/fabrics/${name}`);
-
-//     return res.data;
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
-
 export const getFabrics = async () => {
   try {
     const res = await axios.get(`${apiUrl}/fabrics`);
@@ -56,9 +42,9 @@ export const getRecQuestions = async () => {
   }
 };
 
-export const getResults = async () => {
+export const getResult = async (result) => {
   try {
-    const res = await axios.get(`${apiUrl}/results`);
+    const res = await axios.get(`${apiUrl}/results/${result}`);
 
     return res.data;
   } catch (error) {

@@ -1,5 +1,6 @@
 import "./QuizSlides.scss";
 import React, { useState } from "react";
+import QuizResults from "../QuizResults/QuizResults";
 
 const RecQuizSlides = (props) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -32,14 +33,7 @@ const RecQuizSlides = (props) => {
   ));
 
   if (showResults) {
-    return (
-      <>
-        <p>piu</p>
-        <p>piu</p>
-        <p>piu</p>
-        <p>piu</p>
-      </>
-    );
+    return <QuizResults score={score} result={result} />;
   }
 
   return (
