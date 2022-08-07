@@ -15,7 +15,7 @@ const ScoredQuizSlides = (props) => {
   };
 
   if (currentQuestion === questions.length) {
-    return <RecQuizSlides questions={recQuestions} />;
+    return <RecQuizSlides questions={recQuestions} score={score} />;
   }
 
   const answers = questions[currentQuestion].answers.map((answer) => (

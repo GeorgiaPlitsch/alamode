@@ -3,7 +3,8 @@ import React, { useState } from "react";
 
 const RecQuizSlides = (props) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [Result, setResult] = useState(0);
+  const [result, setResult] = useState(0);
+  const [showResults, setShowResults] = useState(false);
 
   const questions = props.questions;
   const score = props.score;
@@ -13,22 +14,15 @@ const RecQuizSlides = (props) => {
       findRecQuestion(result);
     } else {
       setResult(result);
-      return (
-        <>
-          <p>results</p>
-          <p>results</p>
-          <p>results</p>
-          <p>results</p>
-        </>
-      );
+      setShowResults(true);
     }
   };
 
   const findRecQuestion = (answerResult) => {
-    const filteredQuestion = questions.findIndex(
+    const recQuestion = questions.findIndex(
       (question) => question.id === answerResult
     );
-    setCurrentQuestion(filteredQuestion);
+    setCurrentQuestion(recQuestion);
   };
 
   const answers = questions[currentQuestion].answers.map((answer) => (
@@ -37,10 +31,21 @@ const RecQuizSlides = (props) => {
     </button>
   ));
 
+  if (showResults) {
+    return (
+      <>
+        <p>piu</p>
+        <p>piu</p>
+        <p>piu</p>
+        <p>piu</p>
+      </>
+    );
+  }
+
   return (
     <div className="quiz">
       <div className="quiz__question">
-        <p className="quiz__question-count">Question {currentQuestion + 1}</p>
+        <h3 className="quiz__question-count">Question {currentQuestion + 6}</h3>
         <div className="quiz__question-text">
           {questions[currentQuestion].questionText}
         </div>
