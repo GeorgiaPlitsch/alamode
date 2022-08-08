@@ -28,7 +28,7 @@ const ScoredQuizSlides = (props) => {
   ));
 
   return (
-    <div className="quiz">
+    <div ref={props.refProp} className="quiz">
       <div className="quiz__question">
         <h2 className="quiz__question-count">Question {currentQuestion + 1}</h2>
 

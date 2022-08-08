@@ -2,8 +2,9 @@
 @import "../../styles/partials/colours";
 
 .quiz {
+  @include padding-before-headline;
   @include padding-side;
-  height: 92vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

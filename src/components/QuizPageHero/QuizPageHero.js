@@ -1,7 +1,7 @@
 import "./QuizPageHero.scss";
 import downArrow from "../../assets/icons/down-arrow.png";
 
-const QuizPageHero = () => {
+const QuizPageHero = (props) => {
   return (
     <>
       <div className="quizHero">
@@ -16,7 +16,7 @@ const QuizPageHero = () => {
           </h4>
         </div>
 
-        <div>
+        <div onClick={props.buttonClick}>
           <img
             className="quizHero__down"
             src={downArrow}

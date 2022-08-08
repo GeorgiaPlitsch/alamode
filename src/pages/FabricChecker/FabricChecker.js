@@ -3,11 +3,17 @@ import FabricPageHero from "../../components/FabricPageHero/FabricPageHero.js";
 import FabricCheckerForm from "../../components/FabricCheckerForm/FabricCheckerForm";
 import FabricCheckerResults from "../../components/FabricCheckerResults/FabricCheckerResults";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 const FabricChecker = () => {
   const [fabrics, setFabrics] = useState([]);
   const [selectedFabrics, setSelectedFabrics] = useState([]);
+
+  const contentDivRef = useRef();
+
+  const handleClick = () => {
+    contentDivRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   useEffect(() => {
     Api.getFabrics().then((result) => {
@@ -33,8 +39,8 @@ const FabricChecker = () => {
 
   return (
     <section className="page">
-      <FabricPageHero />
-      <FabricCheckerForm handleSubmit={handleSubmit} />
+      <FabricPageHero buttonClick={handleClick} />
+      <FabricCheckerForm refProp={contentDivRef} handleSubmit={handleSubmit} />
       <FabricCheckerResults fabricDetails={selectedFabrics} />
     </section>
   );

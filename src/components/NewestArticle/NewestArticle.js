@@ -7,7 +7,7 @@ const NewestArticle = (props) => {
     return;
   }
   return (
-    <section className="newestArticle">
+    <section ref={props.refProp} className="newestArticle">
       <h3 className="newestArticle__header">New...</h3>
       <div>
         <img className="newestArticle__img" src={article.image}></img>

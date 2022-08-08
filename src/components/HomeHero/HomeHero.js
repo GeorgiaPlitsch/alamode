@@ -2,7 +2,9 @@ import "./HomeHero.scss";
 import downArrow from "../../assets/icons/down-arrow.png";
 import { Link } from "react-router-dom";
 
-const HomeHero = () => {
+const HomeHero = (props) => {
+  const buttonClick = props.buttonClick;
+
   return (
     <section className="home">
       <div className="home__hero">
@@ -24,6 +26,7 @@ const HomeHero = () => {
 
         <div>
           <img
+            onClick={buttonClick}
             className="home__hero-down"
             src={downArrow}
             alt="downwards arrow icon"

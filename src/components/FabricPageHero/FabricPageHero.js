@@ -1,7 +1,7 @@
 import "./FabricPageHero.scss";
 import downArrow from "../../assets/icons/down-arrow.png";
 
-const FabricPageHero = () => {
+const FabricPageHero = (props) => {
   return (
     <>
       <div className="fabricHero">
@@ -17,7 +17,7 @@ const FabricPageHero = () => {
           </h4>
         </div>
 
-        <div>
+        <div onClick={props.buttonClick}>
           <img
             className="fabricHero__down"
             src={downArrow}

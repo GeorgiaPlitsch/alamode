@@ -3,7 +3,7 @@ import "./FabricCheckerForm.scss";
 
 const FabricCheckerForm = (props) => {
   return (
-    <section className="checker">
+    <section ref={props.refProp} className="checker">
       <h3 className="checker__heading">
         Enter the fabric composition of an item below:
       </h3>
