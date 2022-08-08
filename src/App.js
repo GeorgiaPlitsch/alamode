@@ -1,5 +1,5 @@
 import { BrowserRouter, Redirect, Route, Switch, Link } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 
 import "./App.scss";
 import { slide as Menu } from "react-burger-menu";
@@ -12,27 +12,47 @@ import FabricChecker from "./pages/FabricChecker/FabricChecker";
 import Quiz from "./pages/Quiz/Quiz";
 
 function App() {
+  const [isOpen, setOpen] = useState(false);
+
+  const handleIsOpen = () => {
+    setOpen(!isOpen);
+  };
+
+  const closeSideBar = () => {
+    setOpen(false);
+  };
+
   return (
     <div className="App">
       <BrowserRouter>
         <Header />
-        <Menu pageWrapId={"page-wrap"} />
+        <Menu />
         <main id="page-wrap">
-          <Menu className="App__menu">
+          <Menu
+            isOpen={isOpen}
+            onOpen={handleIsOpen}
+            onClose={handleIsOpen}
+            pageWrapId={"page-wrap"}
+            className="App__menu"
+          >
             <h1>ÀLaMode</h1>
-            <Link to="/" className="menu-item">
+            <Link to="/" onClick={closeSideBar} className="menu-item">
               <h3>Home</h3>
             </Link>
-            <Link to="/fabricchecker" className="menu-item">
+            <Link
+              to="/fabricchecker"
+              onClick={closeSideBar}
+              className="menu-item"
+            >
               <h3>Fabric Composition Checker</h3>
             </Link>
-            <Link to="/quiz" className="menu-item">
+            <Link to="/quiz" onClick={closeSideBar} className="menu-item">
               <h3>Sustainability Quiz</h3>
             </Link>
-            <Link to="/articles" className="menu-item">
+            <Link to="/articles" onClick={closeSideBar} className="menu-item">
               <h3>Articles</h3>
             </Link>
-            <Link to="/about" className="menu-item">
+            <Link to="/about" onClick={closeSideBar} className="menu-item">
               <h3>About</h3>
             </Link>
           </Menu>
