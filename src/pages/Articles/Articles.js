@@ -22,7 +22,12 @@ const Articles = () => {
     cards.push(<ArticleCard key={uuid()} article={article} />);
   });
 
-  return <div className="articles">{cards}</div>;
+  return (
+    <section className="articles">
+      <h2 className="articles__header">Articles</h2>
+      <div className="articles__cards">{cards}</div>
+    </section>
+  );
 };
 
 export default Articles;

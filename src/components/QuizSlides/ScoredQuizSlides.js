@@ -1,5 +1,6 @@
 import "./QuizSlides.scss";
 import React, { useState } from "react";
+import { v4 as uuid } from "uuid";
 import RecQuizSlides from "./RecQuizSlides";
 
 const ScoredQuizSlides = (props) => {
@@ -20,6 +21,7 @@ const ScoredQuizSlides = (props) => {
 
   const answers = questions[currentQuestion].answers.map((answer) => (
     <button
+      key={uuid()}
       className="quiz__answers-button"
       onClick={() => handleAnswerClick(answer.answerScore)}
     >

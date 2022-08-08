@@ -1,6 +1,6 @@
 import "./QuizResults.scss";
 import * as Api from "../../Api/Api.js";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const QuizResults = (props) => {
   const score = props.score;
@@ -8,16 +8,28 @@ const QuizResults = (props) => {
 
   const [reccomendation, setReccomendation] = useState([]);
 
+  //const contentDivRef = useRef();
+
+  // const onRender = () => {
+  //   const section = document.querySelector("results-section");
+  //   section.scrollIntoView({ behavior: "smooth", block: "start" });
+  // };
+
   useEffect(() => {
     Api.getResult(result).then((res) => {
       setReccomendation(res);
     });
   }, []);
 
-  console.log(reccomendation);
+  // useEffect(() => {
+  //   if (!reccomendation) {
+  //     return <p>Loading...</p>;
+  //   }
+  //   onRender();
+  // }, []);
 
   return (
-    <section className="results">
+    <section id="results-section" className="results">
       <div className="results__score">
         <h3>Based on your current fashion consumption, you scored:</h3>
         <div className="results__score-container">

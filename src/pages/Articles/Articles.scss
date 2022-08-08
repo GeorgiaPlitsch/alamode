@@ -3,10 +3,22 @@
 @import "../../styles/partials/fonts";
 
 .articles {
-  @include padding-before-headline;
+  margin-top: 60px;
   @include padding-side;
   @include component-gap;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+
+  &__header {
+    color: $alamode-darkpink;
+    align-self: flex-start;
+  }
+
+  &__cards {
+    @include component-gap;
+    display: flex;
+    flex-direction: column;
+  }
 }
