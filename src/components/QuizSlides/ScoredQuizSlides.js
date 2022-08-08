@@ -19,20 +19,27 @@ const ScoredQuizSlides = (props) => {
   }
 
   const answers = questions[currentQuestion].answers.map((answer) => (
-    <button onClick={() => handleAnswerClick(answer.answerScore)}>
-      {answer.answerText}
+    <button
+      className="quiz__answers-button"
+      onClick={() => handleAnswerClick(answer.answerScore)}
+    >
+      <p>{answer.answerText}</p>
     </button>
   ));
 
   return (
     <div className="quiz">
       <div className="quiz__question">
-        <p className="quiz__question-count">Question {currentQuestion + 1}</p>
-        <div className="quiz__question-text">
-          {questions[currentQuestion].questionText}
+        <h2 className="quiz__question-count">Question {currentQuestion + 1}</h2>
+
+        <div className="quiz__container">
+          <h3 className="quiz__question-text">
+            {questions[currentQuestion].questionText}
+          </h3>
+
+          <div className="quiz__answers">{answers}</div>
         </div>
       </div>
-      <div className="quiz__answer-section">{answers}</div>
     </div>
   );
 };

@@ -1,15 +1,54 @@
+@import "../../styles/partials/padding";
+@import "../../styles/partials/colours";
+@import "../../styles/partials/fonts";
+
 .results {
-  margin-top: 60px;
+  @include padding-side;
+  @include component-gap;
+  display: flex;
+  flex-direction: column;
   &__score {
+    @include component-gap;
+    display: flex;
+    flex-direction: column;
+
+    &-container {
+      display: flex;
+      background-color: $alamode-darkpink;
+      align-self: center;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      align-content: center;
+      justify-content: center;
+    }
     &-text {
+      align-self: center;
+      @include section-header-alt;
     }
   }
 
   &__rec {
+    @include padding-between-sections;
+    display: flex;
+    flex-direction: column;
+    @include component-gap;
+    background-color: white;
+    padding: 16px;
     &-heading {
+      color: $alamode-darkgreen;
     }
 
+    &-container {
+      @include padding-side;
+      @include component-gap;
+      display: flex;
+      flex-direction: row;
+    }
     &-name {
+      @include section-header-alt;
+      color: $alamode-darkorange;
+      font-size: 20px;
     }
 
     &-description {
@@ -19,6 +58,7 @@
       width: 100px;
       height: 100px;
       border-radius: 50%;
+      align-self: center;
     }
   }
 }

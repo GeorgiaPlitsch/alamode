@@ -1,5 +1,53 @@
+@import "../../styles/partials/padding";
+@import "../../styles/partials/colours";
+
 .quiz {
-  margin-top: 60px;
+  @include padding-side;
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $alamode-yellow;
+  flex-grow: 1;
+
+  &__container {
+    @include component-gap;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
   &__question {
+    @include component-gap;
+    display: flex;
+    flex-direction: column;
+    @include padding-between-sections;
+
+    &-count {
+      color: $alamode-darkgreen;
+      text-decoration: underline;
+    }
+
+    &-text {
+      color: $alamode-darkgreen;
+      padding-bottom: 32px;
+    }
+  }
+
+  &__answers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 36px;
+    &-button {
+      @include padding-side;
+      border: none;
+      outline: none;
+      background-color: $alamode-darkpink;
+      border-radius: 10px;
+      width: 80%;
+      min-height: 56px;
+      color: white;
+    }
   }
 }

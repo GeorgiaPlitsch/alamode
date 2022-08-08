@@ -88,11 +88,17 @@
 @mixin button {
   font-family: garet;
   font-size: 14px;
-  line-height: 32px;
+  line-height: 20px;
 }
 
 @mixin body-small {
   font-family: garet;
   font-size: 12px;
   line-height: 12px;
+}
+
+@mixin body {
+  font-family: garet;
+  font-size: 14px;
+  line-height: 18px;
 }

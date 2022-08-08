@@ -25,3 +25,7 @@ h5 {
   @include subheader;
   margin: 0;
 }
+
+p {
+  @include body;
+}
