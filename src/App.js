@@ -19,6 +19,7 @@ function App() {
   };
 
   const closeSideBar = () => {
+    window.scrollTo(0, 0);
     setOpen(false);
   };
 

@@ -1,31 +1,34 @@
 import "./Article.scss";
 import * as Api from "../../Api/Api.js";
 import React, { useEffect, useState } from "react";
+import { v4 as uuid } from "uuid";
 import { useHistory } from "react-router-dom";
 import backArrow from "../../assets/icons/back-arrow-pink.svg";
 
 const Article = (props) => {
-  const id = props.match.params.id;
-  const [article, setArticle] = useState([]);
+  const [article, setArticle] = useState();
   const history = useHistory();
 
   useEffect(() => {
+    const id = props.match.params.id;
+
     Api.getArticle(id).then((result) => {
       setArticle(result);
     });
   }, []);
 
-  //   const articleText = article.text;
-  //   const articleTextParagraphs = [];
+  if (!article) {
+    return <p>Loading...</p>;
+  }
 
-  //   console.log(articleText);
+  const articleTextParagraphs = [];
 
-  //   articleText.forEach((paragraph) => {
-  //     if (!paragraph) {
-  //       return;
-  //     }
-  //     articleTextParagraphs.push(<p>{paragraph}</p>);
-  //   });
+  article.text.forEach((paragraph) => {
+    if (!paragraph) {
+      return;
+    }
+    articleTextParagraphs.push(<p key={uuid()}>{paragraph}</p>);
+  });
 
   return (
     <section className="article">
@@ -41,7 +44,7 @@ const Article = (props) => {
       <div className="article__body">
         <h4>- {article.author}</h4>
         <img className="article__image" src={`${article.image}`} />
-        <div className="article__text">{article.text}</div>
+        <div className="article__text">{articleTextParagraphs}</div>
       </div>
     </section>
   );
