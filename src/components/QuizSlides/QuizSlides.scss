@@ -4,6 +4,7 @@
 .quiz {
   @include padding-before-headline;
   @include padding-side;
+  padding-bottom: 24px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -50,5 +51,9 @@
       min-height: 56px;
       color: white;
     }
+  }
+
+  &__back {
+    width: 20px;
   }
 }

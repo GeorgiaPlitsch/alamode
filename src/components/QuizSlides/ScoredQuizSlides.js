@@ -2,6 +2,10 @@ import "./QuizSlides.scss";
 import React, { useState } from "react";
 import { v4 as uuid } from "uuid";
 import RecQuizSlides from "./RecQuizSlides";
+import backArrow from "../../assets/icons/back-arrow-pink.svg";
+
+// TODO fix sent from back
+// TODO on back button click for 1st q scroll to top
 
 const ScoredQuizSlides = (props) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -66,7 +70,7 @@ const ScoredQuizSlides = (props) => {
 
           <div className="quiz__answers">{answers}</div>
           <div className="quiz__back" onClick={onBackButton}>
-            {"<-"}
+            <img src={backArrow} />
           </div>
         </div>
       </div>
