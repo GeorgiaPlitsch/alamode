@@ -11,6 +11,7 @@ import Footer from "./components/Footer/Footer";
 import FabricChecker from "./pages/FabricChecker/FabricChecker";
 import Quiz from "./pages/Quiz/Quiz";
 import Forum from "./pages/Forum/Forum";
+import ForumPost from "./pages/ForumPost/ForumPost";
 
 function App() {
   const [isOpen, setOpen] = useState(false);
@@ -70,6 +71,7 @@ function App() {
             <Route path="/quiz" component={Quiz} />
             <Route path="/fabricchecker" component={FabricChecker} />
             <Route path="/forum" component={Forum} />
+            <Route path="/forum/:id" component={ForumPost} />
           </Switch>
 
           <Footer />
