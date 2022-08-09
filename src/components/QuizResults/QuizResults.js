@@ -1,6 +1,8 @@
 import "./QuizResults.scss";
 import * as Api from "../../Api/Api.js";
 import React, { useState, useEffect, useRef } from "react";
+import downArrow from "../../assets/icons/down-arrow.png";
+import { Link } from "react-router-dom";
 
 const QuizResults = (props) => {
   const score = props.score;
@@ -42,8 +44,14 @@ const QuizResults = (props) => {
         <div className="results__rec-container">
           <p className="results__rec-description">
             {reccomendation.description}
+            <br></br> <br></br>
+            <Link to={`/articles/${reccomendation.articleId}`}>
+              <h5> Read more here</h5>
+            </Link>
           </p>
-          <img className="results__rec-icon" src={reccomendation.icon}></img>
+          <a href={reccomendation.site} target="_blank">
+            <img className="results__rec-icon" src={reccomendation.icon}></img>{" "}
+          </a>
         </div>
       </div>
     </section>

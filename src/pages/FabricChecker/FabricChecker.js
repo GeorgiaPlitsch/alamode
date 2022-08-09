@@ -21,17 +21,9 @@ const FabricChecker = () => {
     });
   }, []);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    const fabricsFromForm = [
-      event.target.fabric1.value,
-      event.target.fabric2.value,
-      event.target.fabric3.value,
-    ];
-
+  const handleSubmit = (formFabrics) => {
     const selected = fabrics.filter((fabric) => {
-      return fabricsFromForm.includes(fabric.name);
+      return formFabrics.includes(fabric.name);
     });
 
     setSelectedFabrics(selected);
@@ -40,7 +32,11 @@ const FabricChecker = () => {
   return (
     <section className="page">
       <FabricPageHero buttonClick={handleClick} />
-      <FabricCheckerForm refProp={contentDivRef} handleSubmit={handleSubmit} />
+      <FabricCheckerForm
+        refProp={contentDivRef}
+        handleSubmit={handleSubmit}
+        fabrics={fabrics}
+      />
       <FabricCheckerResults fabricDetails={selectedFabrics} />
     </section>
   );

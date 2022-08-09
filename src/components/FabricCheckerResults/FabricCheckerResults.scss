@@ -6,7 +6,7 @@
   @include component-gap;
   @include padding-between-sections;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   padding-bottom: 24px;
   background-color: $alamode-yellow;
   &__result {

@@ -1,55 +1,59 @@
 import SubmitButton from "../SubmitButton/SubmitButton";
 import "./FabricCheckerForm.scss";
+import { useState } from "react";
+import { v4 as uuid } from "uuid";
 
 const FabricCheckerForm = (props) => {
+  const generateFabricInput = (value) => {
+    return (
+      <input
+        className="checker__form-input"
+        type="text"
+        placeholder="Select fabric"
+        list="fabricname"
+        id={uuid()}
+        value={value}
+        onChange={onFabricChange}
+      ></input>
+    );
+  };
+
+  // TODO fix ai of fabric forms - disable typing - convert to <select> <option> element
+
+  const onFabricChange = (event) => {
+    setSelectedFabrics((current) => [...current, event.target.value]);
+    setFabricInputs((current) => [...current, generateFabricInput()]);
+  };
+
+  const onSubmit = () => {
+    props.handleSubmit(selectedFabrics);
+  };
+
+  const [fabricInputs, setFabricInputs] = useState([generateFabricInput()]);
+  const [selectedFabrics, setSelectedFabrics] = useState([]);
+
+  const fabricNames = props.fabrics.map((fabric) => {
+    return fabric.name;
+  });
+
+  const fabricOptions = fabricNames
+    .filter((fabric) => {
+      return !selectedFabrics.includes(fabric);
+    })
+    .map((fabric) => {
+      return <option value={fabric}></option>;
+    });
+
   return (
     <section ref={props.refProp} className="checker">
       <h3 className="checker__heading">
         Enter the fabric composition of an item below:
       </h3>
-      <form className="checker__form" onSubmit={props.handleSubmit}>
-        <input
-          className="checker__form-input"
-          type="text"
-          name="fabric1"
-          placeholder="Select fabric"
-          list="fabricname"
-        ></input>
-        <datalist id="fabricname">
-          <option value="Acetate" id="IdPlaceholder">
-            Acetate
-          </option>
-          <option value="Cotton">Cotton</option>
-          <option value="Cupro">Cupro</option>
-        </datalist>
-
-        <input
-          className="checker__form-input"
-          type="text"
-          name="fabric2"
-          placeholder="Select fabric"
-          list="fabricname"
-        ></input>
-        <datalist id="fabricname">
-          <option value="Acetate">Acetate</option>
-          <option value="Cotton">Cotton</option>
-          <option value="Cupro">Cupro</option>
-        </datalist>
-
-        <input
-          className="checker__form-input"
-          type="text"
-          name="fabric3"
-          placeholder="Select fabric"
-          list="fabricname"
-        ></input>
-        <datalist id="fabricname">
-          <option value="Acetate">Acetate</option>
-          <option value="Cotton">Cotton</option>
-          <option value="Cupro">Cupro</option>
-        </datalist>
-        <SubmitButton type="button" text="CHECK" />
-      </form>
+      <div className="checker__form">
+        {fabricInputs}
+        <datalist id="fabricname">{fabricOptions}</datalist>
+        <SubmitButton type="button" text="CHECK" onClick={onSubmit} />
+      </div>
     </section>
   );
 };

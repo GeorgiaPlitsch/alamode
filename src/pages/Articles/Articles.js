@@ -4,6 +4,8 @@ import "./Articles.scss";
 import * as Api from "../../Api/Api.js";
 import React, { useEffect, useState } from "react";
 
+// TODO filter articles feature
+
 const Articles = () => {
   const [articles, setArticles] = useState([]);
 

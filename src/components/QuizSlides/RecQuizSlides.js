@@ -44,7 +44,7 @@ const RecQuizSlides = (props) => {
   return (
     <div className="quiz">
       <div className="quiz__question">
-        <h3 className="quiz__question-count">Question {currentQuestion + 6}</h3>
+        <h2 className="quiz__question-count">Question {currentQuestion + 6}</h2>
         <div className="quiz__container">
           <h3 className="quiz__question-text">
             {questions[currentQuestion].questionText}
