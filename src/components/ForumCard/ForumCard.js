@@ -7,11 +7,17 @@ const ForumCard = (props) => {
   const post = props.post;
   const postId = post.id;
 
+  const responses = post.postResponses;
+  const numberOfPosts = responses.length + 1;
+
   return (
     <article className="forumCard">
-      <h3>{post.postTitle}</h3>
-      <p>{post.authorName}</p>
-      <p>{post.postDate}</p>
+      <h3 className="forumCard__title">{post.postTitle}</h3>
+
+      <div className="forumCard__container">
+        <p>{post.postDate}</p>
+        <p>{numberOfPosts} posts</p>
+      </div>
     </article>
   );
 };

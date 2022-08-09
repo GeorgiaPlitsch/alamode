@@ -1,5 +1,6 @@
 import { v4 as uuid } from "uuid";
 import * as Api from "../../Api/Api.js";
+import "./Forum.scss";
 import ForumCard from "../../components/ForumCard/ForumCard.js";
 import React, { useEffect, useState } from "react";
 
@@ -23,7 +24,7 @@ const Forum = () => {
 
   return (
     <section className="forum">
-      <h2 className="forum__header">Articles</h2>
+      <h2 className="forum__header">Discussions</h2>
       <div className="forum__cards">{cards}</div>
     </section>
   );

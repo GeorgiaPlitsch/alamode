@@ -1,0 +1,24 @@
+@import "../../styles/partials/colours";
+@import "../../styles/partials/padding";
+@import "../../styles/partials/fonts";
+
+.forumCard {
+  @include padding-side;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: $padding-side-mobile;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 8px;
+    color: $alamode-darkpink;
+  }
+
+  &__title {
+    @include section-header-alt;
+    font-size: 20px;
+  }
+}

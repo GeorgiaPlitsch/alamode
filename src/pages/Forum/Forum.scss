@@ -1,0 +1,21 @@
+@import "../../styles/partials/colours";
+@import "../../styles/partials/padding";
+
+.forum {
+  @include padding-between-sections;
+  margin-top: 60px;
+  background-color: #d8f3dc;
+  padding-bottom: 24px;
+
+  &__header {
+    @include padding-side;
+    color: $alamode-darkgreen;
+  }
+
+  &__cards {
+    @include padding-between-sections;
+    @include component-gap;
+    display: flex;
+    flex-direction: column;
+  }
+}
