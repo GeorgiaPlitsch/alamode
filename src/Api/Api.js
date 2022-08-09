@@ -61,3 +61,13 @@ export const getResult = async (result) => {
     console.log(error);
   }
 };
+
+export const getForumPosts = async (result) => {
+  try {
+    const res = await axios.get(`${apiUrl}/forum`);
+
+    return res.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
