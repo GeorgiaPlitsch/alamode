@@ -20,6 +20,14 @@ const RecQuizSlides = (props) => {
     }
   };
 
+  const onBackButton = () => {
+    if (currentQuestion === 0) {
+      return;
+    }
+
+    setCurrentQuestion(currentQuestion - 1);
+  };
+
   const findRecQuestion = (answerResult) => {
     const recQuestion = questions.findIndex(
       (question) => question.id === answerResult
@@ -51,6 +59,9 @@ const RecQuizSlides = (props) => {
           </h3>
 
           <div className="quiz__answers">{answers}</div>
+          <div className="quiz__back" onClick={onBackButton}>
+            {"<-"}
+          </div>
         </div>
       </div>
     </div>

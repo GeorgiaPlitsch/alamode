@@ -21,8 +21,8 @@ const FabricCheckerForm = (props) => {
   // TODO fix ai of fabric forms - disable typing - convert to <select> <option> element
 
   const onFabricChange = (event) => {
-    setSelectedFabrics((current) => [...current, event.target.value]);
-    setFabricInputs((current) => [...current, generateFabricInput()]);
+    setSelectedFabrics([...selectedFabrics, event.target.value]);
+    setFabricInputs([...fabricInputs, generateFabricInput()]);
   };
 
   const onSubmit = () => {

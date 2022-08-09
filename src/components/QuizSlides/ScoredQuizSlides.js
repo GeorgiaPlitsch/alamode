@@ -5,25 +5,40 @@ import RecQuizSlides from "./RecQuizSlides";
 
 const ScoredQuizSlides = (props) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [score, setScore] = useState(0);
+  const [scores, setScores] = useState([]);
 
   const questions = props.questions;
   const recQuestions = props.recQuestions;
 
-  const handleAnswerClick = (questionScore) => {
-    setScore(score + questionScore);
+  const onAnswerClick = (questionScore) => {
+    setScores([...scores, questionScore]);
     setCurrentQuestion(currentQuestion + 1);
   };
 
+  const onBackButton = () => {
+    if (currentQuestion === 0) {
+      return;
+    }
+
+    setCurrentQuestion(currentQuestion - 1);
+    scores.splice(-1, 1);
+  };
+
   if (currentQuestion === questions.length) {
-    return <RecQuizSlides questions={recQuestions} score={score} />;
+    console.log(scores);
+    return (
+      <RecQuizSlides
+        questions={recQuestions}
+        score={scores.reduce((prev, current) => prev + current, 0)}
+      />
+    );
   }
 
   const answers = questions[currentQuestion].answers.map((answer) => (
     <button
       key={uuid()}
       className="quiz__answers-button"
-      onClick={() => handleAnswerClick(answer.answerScore)}
+      onClick={() => onAnswerClick(answer.answerScore)}
     >
       <p>{answer.answerText}</p>
     </button>
@@ -40,6 +55,9 @@ const ScoredQuizSlides = (props) => {
           </h3>
 
           <div className="quiz__answers">{answers}</div>
+          <div className="quiz__back" onClick={onBackButton}>
+            {"<-"}
+          </div>
         </div>
       </div>
     </div>
