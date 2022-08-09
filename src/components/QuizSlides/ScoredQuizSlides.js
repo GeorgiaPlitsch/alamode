@@ -10,6 +10,14 @@ const ScoredQuizSlides = (props) => {
   const questions = props.questions;
   const recQuestions = props.recQuestions;
 
+  // const scoreFromBack = props.scoreFromBack;
+  // const sentFromBack = props.sentFromBack;
+
+  // if (sentFromBack) {
+  //   setScores(scoreFromBack);
+  //   setCurrentQuestion(4);
+  // }
+
   const onAnswerClick = (questionScore) => {
     setScores([...scores, questionScore]);
     setCurrentQuestion(currentQuestion + 1);
@@ -29,7 +37,9 @@ const ScoredQuizSlides = (props) => {
     return (
       <RecQuizSlides
         questions={recQuestions}
+        scoreArray={scores}
         score={scores.reduce((prev, current) => prev + current, 0)}
+        questionsForBack={questions}
       />
     );
   }

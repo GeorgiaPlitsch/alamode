@@ -37,6 +37,7 @@ const Quiz = () => {
         refProp={contentDivRef}
         questions={scoredQuestions}
         recQuestions={recQuestions}
+        sentFromBack={false}
       />
     </>
   );
