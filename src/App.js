@@ -10,6 +10,8 @@ import Article from "./pages/Article/Article";
 import Footer from "./components/Footer/Footer";
 import FabricChecker from "./pages/FabricChecker/FabricChecker";
 import Quiz from "./pages/Quiz/Quiz";
+import Forum from "./pages/Forum/Forum";
+import ForumPost from "./pages/ForumPost/ForumPost";
 
 function App() {
   const [isOpen, setOpen] = useState(false);
@@ -53,6 +55,9 @@ function App() {
             <Link to="/articles" onClick={closeSideBar} className="menu-item">
               <h3>Articles</h3>
             </Link>
+            <Link to="/forum" onClick={closeSideBar} className="menu-item">
+              <h3>Forum</h3>
+            </Link>
             <Link to="/about" onClick={closeSideBar} className="menu-item">
               <h3>About</h3>
             </Link>
@@ -65,6 +70,8 @@ function App() {
             <Route path="/articles/:id" component={Article} />
             <Route path="/quiz" component={Quiz} />
             <Route path="/fabricchecker" component={FabricChecker} />
+            <Route path="/forum" component={Forum} />
+            <Route path="/forum/:id" component={ForumPost} />
           </Switch>
 
           <Footer />
