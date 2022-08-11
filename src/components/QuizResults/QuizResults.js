@@ -33,7 +33,7 @@ const QuizResults = (props) => {
   return (
     <section id="results-section" className="results">
       <div className="results__score">
-        <h3>Based on your current fashion consumption, you scored:</h3>
+        <h3>Based on your current fashion consumption, your rating is:</h3>
         <div className="results__score-container">
           <h2 className="results__score-text">{score}%</h2>
         </div>
@@ -49,7 +49,11 @@ const QuizResults = (props) => {
               <h5> Read more here</h5>
             </Link>
           </p>
-          <a href={reccomendation.site} target="_blank">
+          <a
+            classsName="results__rec-a"
+            href={reccomendation.site}
+            target="_blank"
+          >
             <img className="results__rec-icon" src={reccomendation.icon}></img>{" "}
           </a>
         </div>

@@ -2,14 +2,28 @@
 @import "../../styles/partials/padding";
 
 .forum {
-  @include padding-between-sections;
   margin-top: 60px;
+  padding-top: 16px;
   background-color: #d8f3dc;
   padding-bottom: 24px;
 
-  &__header {
+  &__container {
     @include padding-side;
-    color: $alamode-darkgreen;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__header {
+    color: $alamode-darkpink;
+  }
+
+  &__write {
+    height: 38px;
+    width: 38px;
+    align-self: center;
+    margin-right: 2px;
+    margin-top: 4px;
   }
 
   &__cards {

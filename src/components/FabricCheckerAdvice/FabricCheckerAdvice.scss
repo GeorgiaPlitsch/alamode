@@ -1,0 +1,35 @@
+@import "../../styles/partials/colours";
+@import "../../styles/partials/padding";
+@import "../../styles/partials/fonts";
+
+.advice {
+  @include component-gap;
+  margin-top: 24px;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  padding: 16px;
+  border-radius: 4px;
+
+  &__header {
+    padding-top: 8px;
+    @include section-header-alt;
+    color: $alamode-darkpink;
+    padding-bottom: 16px;
+  }
+
+  &__about {
+    color: $alamode-darkorange;
+  }
+
+  &__text {
+    font-size: 16px;
+    color: $alamode-darkgreen;
+  }
+
+  &__link {
+    text-decoration: underline;
+    color: $alamode-darkorange;
+  }
+}

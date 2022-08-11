@@ -8,6 +8,7 @@
   background-color: $alamode-yellow;
   display: flex;
   flex-direction: column;
+  padding-bottom: 24px;
 
   &__heading {
     @include section-header-alt;

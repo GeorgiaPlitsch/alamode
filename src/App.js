@@ -41,16 +41,15 @@ function App() {
             <Link to="/" onClick={closeSideBar}>
               <h1>ÀLaMode</h1>
             </Link>
-
+            <Link to="/quiz" onClick={closeSideBar} className="menu-item">
+              <h3>Sustainability Quiz</h3>
+            </Link>
             <Link
               to="/fabricchecker"
               onClick={closeSideBar}
               className="menu-item"
             >
               <h3>Fabric Checker</h3>
-            </Link>
-            <Link to="/quiz" onClick={closeSideBar} className="menu-item">
-              <h3>Sustainability Quiz</h3>
             </Link>
             <Link to="/articles" onClick={closeSideBar} className="menu-item">
               <h3>Articles</h3>

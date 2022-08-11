@@ -2,7 +2,8 @@ import "./QuizSlides.scss";
 import React, { useState } from "react";
 import { v4 as uuid } from "uuid";
 import QuizResults from "../QuizResults/QuizResults";
-import ScoredQuizSlides from "./ScoredQuizSlides";
+import backArrow from "../../assets/icons/back-arrow-pink.svg";
+//import ScoredQuizSlides from "./ScoredQuizSlides";
 
 const RecQuizSlides = (props) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -16,7 +17,6 @@ const RecQuizSlides = (props) => {
   const questionsForBack = props.questionsForBack;
 
   scoreArray.splice(-1, 1);
-  console.log("score array for back", scoreArray);
 
   const handleAnswerClick = (result) => {
     if (currentQuestion === 0) {
@@ -80,7 +80,7 @@ const RecQuizSlides = (props) => {
 
           <div className="quiz__answers">{answers}</div>
           <div className="quiz__back" onClick={onBackButton}>
-            {"<-"}
+            <img src={backArrow} />
           </div>
         </div>
       </div>

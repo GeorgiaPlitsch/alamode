@@ -3,6 +3,7 @@ import * as Api from "../../Api/Api.js";
 import "./Forum.scss";
 import ForumCard from "../../components/ForumCard/ForumCard.js";
 import React, { useEffect, useState } from "react";
+import writeIcon from "../../assets/icons/pencil.png";
 
 const Forum = () => {
   const [posts, setPosts] = useState([]);
@@ -24,7 +25,10 @@ const Forum = () => {
 
   return (
     <section className="forum">
-      <h2 className="forum__header">Discussions</h2>
+      <div className="forum__container">
+        <h2 className="forum__header">Discussions</h2>
+        <img className="forum__write" src={writeIcon} />
+      </div>
       <div className="forum__cards">{cards}</div>
     </section>
   );

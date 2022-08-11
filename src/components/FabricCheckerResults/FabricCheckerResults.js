@@ -13,6 +13,7 @@ const FabricCheckerResults = (props) => {
       <article className="results__result" key={uuid()}>
         <div className="results__result-container">
           <h3 className="results__result-header">{fabric.name}</h3>
+          <h3 className="results__result-summary">{fabric.summary}</h3>
           <p className="results__result-text">{fabric.information}</p>
         </div>
       </article>

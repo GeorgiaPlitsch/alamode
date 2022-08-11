@@ -9,6 +9,7 @@
   flex-direction: column-reverse;
   padding-bottom: 24px;
   background-color: $alamode-yellow;
+
   &__result {
     @include padding-side;
 
@@ -28,7 +29,9 @@
       text-underline-offset: 4px;
     }
 
-    &-text {
+    &-summary {
+      padding-top: 16px;
+      color: $alamode-darkorange;
     }
   }
 }
