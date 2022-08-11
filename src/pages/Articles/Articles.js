@@ -3,6 +3,7 @@ import { v4 as uuid } from "uuid";
 import "./Articles.scss";
 import * as Api from "../../Api/Api.js";
 import React, { useEffect, useState } from "react";
+import filterIcon from "../../assets/icons/filter.png";
 
 // TODO filter articles feature
 
@@ -26,7 +27,11 @@ const Articles = () => {
 
   return (
     <section className="articles">
-      <h2 className="articles__header">Articles</h2>
+      <div className="articles__container">
+        <h2 className="articles__header">Articles</h2>
+
+        <img className="articles__filter" src={filterIcon} />
+      </div>
       <div className="articles__cards">{cards}</div>
     </section>
   );

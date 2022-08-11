@@ -16,7 +16,16 @@
   height: 60px;
   background-color: white;
 
-  &-title {
+  &__title {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 140px;
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+    align-self: center;
   }
 }

@@ -20,12 +20,16 @@ body {
   display: flex;
   flex-direction: column;
   align-content: center;
+  margin-top: 4px;
   //border: solid 1px black;
 
   &__menu {
     padding-top: 10px;
     background: white;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     //border-right: 2px solid $alamode-green;
   }
 }
@@ -60,6 +64,10 @@ body {
 .menu-item {
   padding: 40px;
   color: $alamode-darkgreen;
+  &-icon {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .page-wrap {

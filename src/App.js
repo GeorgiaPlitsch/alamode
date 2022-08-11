@@ -38,16 +38,16 @@ function App() {
             pageWrapId={"page-wrap"}
             className="App__menu"
           >
-            <h1>ÀLaMode</h1>
-            <Link to="/" onClick={closeSideBar} className="menu-item">
-              <h3>Home</h3>
+            <Link to="/" onClick={closeSideBar}>
+              <h1>ÀLaMode</h1>
             </Link>
+
             <Link
               to="/fabricchecker"
               onClick={closeSideBar}
               className="menu-item"
             >
-              <h3>Fabric Composition Checker</h3>
+              <h3>Fabric Checker</h3>
             </Link>
             <Link to="/quiz" onClick={closeSideBar} className="menu-item">
               <h3>Sustainability Quiz</h3>
@@ -60,6 +60,9 @@ function App() {
             </Link>
             <Link to="/about" onClick={closeSideBar} className="menu-item">
               <h3>About</h3>
+            </Link>
+            <Link to="/about" onClick={closeSideBar} className="menu-item">
+              <h3>Partners</h3>
             </Link>
           </Menu>
 
