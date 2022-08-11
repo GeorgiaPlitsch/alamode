@@ -31,7 +31,8 @@ const RecQuizSlides = (props) => {
 
   const onBackButton = () => {
     if (currentQuestion === 0) {
-      setBackToScoredQ(true);
+      // setBackToScoredQ(true);
+      return;
     } else {
       setCurrentQuestion(currentQuestion - 1);
     }
@@ -50,7 +51,7 @@ const RecQuizSlides = (props) => {
       className="quiz__answers-button"
       onClick={() => handleAnswerClick(answer.resultId)}
     >
-      <p>{answer.answerText}</p>
+      {answer.answerText}
     </button>
   ));
 
@@ -58,15 +59,15 @@ const RecQuizSlides = (props) => {
     return <QuizResults score={score} result={result} />;
   }
 
-  if (backToScoredQ) {
-    return (
-      <ScoredQuizSlides
-        sentFromBack={true}
-        scoreFromBack={scoreArray}
-        questions={questionsForBack}
-      />
-    );
-  }
+  // if (backToScoredQ) {
+  //   return (
+  //     <ScoredQuizSlides
+  //       sentFromBack={true}
+  //       scoreFromBack={scoreArray}
+  //       questions={questionsForBack}
+  //     />
+  //   );
+  // }
 
   return (
     <div className="quiz">

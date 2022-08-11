@@ -2,11 +2,6 @@
 @import "./colours";
 
 @font-face {
-  font-family: antiqueWonders;
-  src: url("../../assets/fonts/antique_wonders/antiqueWonders.otf");
-}
-
-@font-face {
   font-family: magicRetro;
   src: url("../../assets/fonts/magic_retro/magic_retro.ttf");
 }
@@ -27,18 +22,8 @@
 }
 
 @font-face {
-  font-family: romelio;
-  src: url("../../assets/fonts/romelio/romelio.ttf");
-}
-
-@font-face {
   font-family: nesans;
   src: url("../../assets/fonts/nesans/nesans.ttf");
-}
-
-@font-face {
-  font-family: coolvetica;
-  src: url("../../assets/fonts/coolvetica/coolvetica.otf");
 }
 
 @mixin logo {
@@ -101,4 +86,10 @@
   font-family: garet;
   font-size: 14px;
   line-height: 18px;
+}
+
+@mixin answer {
+  font-family: garet;
+  font-size: 16px;
+  line-height: 20px;
 }

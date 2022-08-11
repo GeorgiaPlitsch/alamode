@@ -54,7 +54,7 @@ const ScoredQuizSlides = (props) => {
       className="quiz__answers-button"
       onClick={() => onAnswerClick(answer.answerScore)}
     >
-      <p>{answer.answerText}</p>
+      {answer.answerText}
     </button>
   ));
 
