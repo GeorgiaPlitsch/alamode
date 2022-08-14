@@ -55,14 +55,13 @@ const FabricCheckerForm = (props) => {
         {fabricInputs}
         <datalist id="fabricname">{fabricOptions}</datalist>
         <div className="checker__form-buttons">
-          <SubmitButton type="button" text="CHECK" onClick={onSubmit} />
-
           <img
             className="checker__form-plus"
             onClick={onPlusClick}
             src={plusIcon}
           />
         </div>
+        <SubmitButton type="button" text="CHECK" onClick={onSubmit} />
         <p className="checker__form-link">Don't see a fabric? Tell us here</p>
       </div>
     </section>

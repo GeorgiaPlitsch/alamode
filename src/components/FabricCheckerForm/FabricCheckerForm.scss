@@ -4,7 +4,6 @@
 
 .checker {
   @include padding-side;
-  @include padding-between-sections;
   padding-top: 60px;
   background-color: $alamode-yellow;
   display: flex;
@@ -39,16 +38,17 @@
     }
 
     &-buttons {
-      // display: flex;
-      // flex-direction: row;
-      // width: 100%;
-      // align-items: center;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: flex-end;
+      padding-right: 80px;
+      margin-bottom: -30px;
     }
 
     &-plus {
-      height: 24px;
-      align-self: flex-end;
-      // padding-right: 80px;
+      height: 20px;
+      align-self: center;
     }
 
     &-link {
