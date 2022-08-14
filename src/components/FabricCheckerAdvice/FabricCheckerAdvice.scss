@@ -4,18 +4,31 @@
 
 .advice {
   @include component-gap;
-  margin-top: 24px;
+  padding-top: 24px;
   flex-direction: column;
   align-items: center;
   width: 100%;
   background-color: white;
   padding: 16px;
   border-radius: 4px;
+  background-color: white;
+  &__container {
+    background-color: $alamode-yellow;
+    padding: 16px;
+    margin: 16px;
+
+    &-text {
+      @include padding-side;
+      margin-left: 16px;
+      margin-right: 16px;
+      background-color: $alamode-yellow;
+    }
+  }
 
   &__header {
     padding-top: 8px;
     @include section-header-alt;
-    color: $alamode-darkpink;
+    color: $alamode-darkgreen;
     padding-bottom: 16px;
   }
 
@@ -26,6 +39,8 @@
   &__text {
     font-size: 16px;
     color: $alamode-darkgreen;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 
   &__link {

@@ -3,6 +3,8 @@
 
 .header {
   @include padding-side;
+  padding-top: 16px;
+  padding-bottom: 14px;
   position: fixed;
   top: 0;
   left: 0;
@@ -13,7 +15,7 @@
 
   padding-left: 70px;
   width: 100%;
-  height: 60px;
+  height: 70px;
   background-color: white;
 
   &__title {
