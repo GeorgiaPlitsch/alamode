@@ -1,22 +1,22 @@
 import "./ForumPostMain.scss";
-import React, { useEffect, useState } from "react";
 
 const ForumPostMain = (props) => {
   const post = props.post;
 
-  const responses = post.postResponses;
-  const numberOfPosts = responses.length + 1;
-
   return (
     <article className="forumPostMain">
-      <h3 className="forumPostMain__title">{post.postTitle}</h3>
-      <div className="forumPostMain__container">
-        <p>{post.postDate}</p>
-        <p>{post.authorName}</p>
+      <div className="forumPostMain__details">
+        <p>
+          {post.postDate}
+          <br></br>
+          <br></br>
+          {post.authorName}
+        </p>
+        <div className="forumPostMain__image"></div>
       </div>
-      <p>{post.postBody}</p>
+      <p className="forumPostMain__body">{post.postBody}</p>
     </article>
   );
 };
 
-export default ForumCard;
+export default ForumPostMain;

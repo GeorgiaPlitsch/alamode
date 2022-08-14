@@ -1,0 +1,28 @@
+@import "../../styles/partials/colours";
+@import "../../styles/partials/padding";
+@import "../../styles/partials/fonts";
+
+.forumPostMain {
+  @include component-gap;
+  @include padding-side;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  color: $alamode-darkgreen;
+
+  &__details {
+    @include body-small;
+    @include component-gap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $alamode-darkpink;
+  }
+  &__image {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    background-color: $alamode-darkorange;
+  }
+}

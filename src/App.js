@@ -72,7 +72,7 @@ function App() {
             <Route path="/articles/:id" component={Article} />
             <Route path="/quiz" component={Quiz} />
             <Route path="/fabricchecker" component={FabricChecker} />
-            <Route path="/forum" component={Forum} />
+            <Route exact path="/forum" component={Forum} />
             <Route path="/forum/:id" component={ForumPost} />
           </Switch>
 

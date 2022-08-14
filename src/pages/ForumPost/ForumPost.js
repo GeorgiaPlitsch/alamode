@@ -3,6 +3,8 @@ import * as Api from "../../Api/Api.js";
 import React, { useEffect, useState } from "react";
 import { v4 as uuid } from "uuid";
 import { useHistory } from "react-router-dom";
+import ForumPostMain from "../../components/ForumPostMain/ForumPostMain";
+import ForumPostResponse from "../../components/ForumPostResponse/ForumPostResponse";
 import backArrow from "../../assets/icons/back-arrow-pink.svg";
 
 const ForumPost = (props) => {
@@ -27,13 +29,24 @@ const ForumPost = (props) => {
     if (!response) {
       return;
     }
-    postReplies.push(<forumPostResponse key={uuid()} reply={response} />);
+    postReplies.push(<ForumPostResponse key={uuid()} reply={response} />);
   });
 
   return (
     <section className="forumPost">
-      <forumPostMain post={post} />
-      <div>{postReplies}</div>
+      <div className="forumPost__head">
+        <img
+          src={backArrow}
+          onClick={() => history.go(-1)}
+          alt="back arrow icon"
+          className="forumPost__back"
+        />
+        <h3 className="forumPost__title">{post.postTitle}</h3>
+      </div>
+      <div className="forumPost__main">
+        <ForumPostMain post={post} />
+      </div>
+      <div className="forumPost__replies">{postReplies}</div>
     </section>
   );
 };
