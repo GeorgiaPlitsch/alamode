@@ -2,6 +2,7 @@ import SubmitButton from "../SubmitButton/SubmitButton";
 import "./FabricCheckerForm.scss";
 import { useState } from "react";
 import { v4 as uuid } from "uuid";
+import plusIcon from "../../assets/icons/plus.png";
 
 const FabricCheckerForm = (props) => {
   const generateFabricInput = (value) => {
@@ -18,10 +19,11 @@ const FabricCheckerForm = (props) => {
     );
   };
 
-  // TODO fix ai of fabric forms - disable typing - convert to <select> <option> element
-
   const onFabricChange = (event) => {
     setSelectedFabrics((current) => [...current, event.target.value]);
+  };
+
+  const onPlusClick = (event) => {
     setFabricInputs((current) => [...current, generateFabricInput()]);
   };
 
@@ -52,8 +54,16 @@ const FabricCheckerForm = (props) => {
       <div className="checker__form">
         {fabricInputs}
         <datalist id="fabricname">{fabricOptions}</datalist>
-        <SubmitButton type="button" text="CHECK" onClick={onSubmit} />
-        <p className="checker__form-link"> Don't see a fabric? Tell us here</p>
+        <div className="checker__form-buttons">
+          <SubmitButton type="button" text="CHECK" onClick={onSubmit} />
+
+          <img
+            className="checker__form-plus"
+            onClick={onPlusClick}
+            src={plusIcon}
+          />
+        </div>
+        <p className="checker__form-link">Don't see a fabric? Tell us here</p>
       </div>
     </section>
   );

@@ -38,6 +38,19 @@
       }
     }
 
+    &-buttons {
+      // display: flex;
+      // flex-direction: row;
+      // width: 100%;
+      // align-items: center;
+    }
+
+    &-plus {
+      height: 24px;
+      align-self: flex-end;
+      // padding-right: 80px;
+    }
+
     &-link {
       @include body-small;
       color: $alamode-darkpink;
