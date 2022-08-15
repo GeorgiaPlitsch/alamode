@@ -4,7 +4,7 @@
 .fabricHero {
   @include padding-before-headline;
   @include padding-side;
-  margin-top: 60px;
+  @include margin-top;
   display: flex;
   flex-direction: column;
   align-items: center;

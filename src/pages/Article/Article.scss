@@ -3,7 +3,7 @@
 @import "../../styles/partials/fonts";
 
 .article {
-  margin-top: 60px;
+  @include margin-top;
   @include padding-side;
 
   &__header {

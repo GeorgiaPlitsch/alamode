@@ -2,7 +2,7 @@
 @import "../../styles/partials/padding";
 
 .forum {
-  margin-top: 60px;
+  @include margin-top;
   padding-top: 16px;
   background-color: #d8f3dc;
   padding-bottom: 24px;

@@ -2,7 +2,7 @@
 @import "../../styles/partials/colours";
 
 .home {
-  margin-top: 60px;
+  @include margin-top;
   &__hero {
     @include padding-before-headline;
     @include padding-side;

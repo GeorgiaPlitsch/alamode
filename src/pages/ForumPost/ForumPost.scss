@@ -3,7 +3,7 @@
 @import "../../styles/partials/fonts";
 
 .forumPost {
-  margin-top: 60px;
+  @include margin-top;
   display: flex;
   flex-direction: column;
   background-color: $alamode-lightgreen;

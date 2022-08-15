@@ -7,8 +7,6 @@
   flex-direction: column;
   gap: 16px;
 
-  //background-color: #b0ddc9;
-
   &__header {
     @include padding-between-sections;
     color: $alamode-darkpink;
