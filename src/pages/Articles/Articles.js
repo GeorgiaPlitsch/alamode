@@ -5,8 +5,6 @@ import * as Api from "../../Api/Api.js";
 import React, { useEffect, useState } from "react";
 import filterIcon from "../../assets/icons/filter.png";
 
-// TODO filter articles feature
-
 const Articles = () => {
   const [articles, setArticles] = useState([]);
 
@@ -29,7 +27,7 @@ const Articles = () => {
     <section className="articles">
       <div className="articles__container">
         <h2 className="articles__header">Articles</h2>
-
+        {/* placeholder icon for filter articles functionality to be implemented in sprint 2 */}
         <img className="articles__filter" src={filterIcon} />
       </div>
       <div className="articles__cards">{cards}</div>

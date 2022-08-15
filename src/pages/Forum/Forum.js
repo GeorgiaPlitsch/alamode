@@ -27,6 +27,7 @@ const Forum = () => {
     <section className="forum">
       <div className="forum__container">
         <h2 className="forum__header">Discussions</h2>
+        {/* placeholder icon for write post functionality to be implemented in sprint 2 */}
         <img className="forum__write" src={writeIcon} />
       </div>
       <div className="forum__cards">{cards}</div>

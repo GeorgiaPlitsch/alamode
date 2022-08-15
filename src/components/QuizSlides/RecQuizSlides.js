@@ -3,20 +3,14 @@ import React, { useState } from "react";
 import { v4 as uuid } from "uuid";
 import QuizResults from "../QuizResults/QuizResults";
 import backArrow from "../../assets/icons/back-arrow-pink.svg";
-//import ScoredQuizSlides from "./ScoredQuizSlides";
 
 const RecQuizSlides = (props) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [result, setResult] = useState(0);
   const [showResults, setShowResults] = useState(false);
-  const [backToScoredQ, setBackToScoredQ] = useState(false);
 
   const questions = props.questions;
   const score = props.score;
-  const scoreArray = props.scoreArray;
-  const questionsForBack = props.questionsForBack;
-
-  scoreArray.splice(-1, 1);
 
   const handleAnswerClick = (result) => {
     if (currentQuestion === 0) {
@@ -27,11 +21,8 @@ const RecQuizSlides = (props) => {
     }
   };
 
-  console.log(currentQuestion);
-
   const onBackButton = () => {
     if (currentQuestion === 0) {
-      // setBackToScoredQ(true);
       return;
     } else {
       setCurrentQuestion(currentQuestion - 1);
@@ -58,16 +49,6 @@ const RecQuizSlides = (props) => {
   if (showResults) {
     return <QuizResults score={score} result={result} />;
   }
-
-  // if (backToScoredQ) {
-  //   return (
-  //     <ScoredQuizSlides
-  //       sentFromBack={true}
-  //       scoreFromBack={scoreArray}
-  //       questions={questionsForBack}
-  //     />
-  //   );
-  // }
 
   return (
     <div className="quiz">

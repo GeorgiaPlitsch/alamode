@@ -12,9 +12,7 @@ const ForumPost = (props) => {
   const history = useHistory();
 
   useEffect(() => {
-    const id = props.match.params.id;
-
-    Api.getForumPost(id).then((result) => {
+    Api.getForumPost(props.match.params.id).then((result) => {
       setPost(result);
     });
   }, []);

@@ -18,11 +18,15 @@
     flex-direction: column;
     align-items: center;
     color: $alamode-darkpink;
+    width: 30%;
   }
   &__image {
     border-radius: 50%;
     height: 60px;
     width: 60px;
     background-color: $alamode-darkorange;
+  }
+  &__body {
+    width: 70%;
   }
 }

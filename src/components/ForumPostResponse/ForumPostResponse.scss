@@ -13,6 +13,7 @@
   &__details {
     @include body-small;
     @include component-gap;
+    width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,5 +24,9 @@
     height: 60px;
     width: 60px;
     background-color: $alamode-darkorange;
+  }
+
+  &__body {
+    width: 70%;
   }
 }

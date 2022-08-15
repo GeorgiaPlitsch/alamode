@@ -15,6 +15,8 @@ const ForumPostResponse = (props) => {
           <br></br>
           {responses.responseName}
         </p>
+
+        {/* placeholer image for 1st sprint - log in with use image to be implemented on sprint 2 */}
         <div className="forumPostMain__image"></div>
       </div>
       <p className="forumPostMain__body">{responses.responseBody}</p>

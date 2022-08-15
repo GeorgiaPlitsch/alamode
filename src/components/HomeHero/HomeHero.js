@@ -18,12 +18,6 @@ const HomeHero = (props) => {
           </button>
         </Link>
 
-        {/* <Link to="/fabricchecker">
-          <button className="home__hero-button">
-            <h4>QUICK FABRIC CHECKER</h4>
-          </button>
-        </Link> */}
-
         <div>
           <img
             onClick={buttonClick}

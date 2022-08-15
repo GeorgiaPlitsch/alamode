@@ -4,23 +4,12 @@ import { v4 as uuid } from "uuid";
 import RecQuizSlides from "./RecQuizSlides";
 import backArrow from "../../assets/icons/back-arrow-pink.svg";
 
-// TODO fix sent from back
-// TODO on back button click for 1st q scroll to top
-
 const ScoredQuizSlides = (props) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [scores, setScores] = useState([]);
 
   const questions = props.questions;
   const recQuestions = props.recQuestions;
-
-  // const scoreFromBack = props.scoreFromBack;
-  // const sentFromBack = props.sentFromBack;
-
-  // if (sentFromBack) {
-  //   setScores(scoreFromBack);
-  //   setCurrentQuestion(4);
-  // }
 
   const onAnswerClick = (questionScore) => {
     setScores([...scores, questionScore]);
@@ -37,13 +26,10 @@ const ScoredQuizSlides = (props) => {
   };
 
   if (currentQuestion === questions.length) {
-    console.log(scores);
     return (
       <RecQuizSlides
         questions={recQuestions}
-        scoreArray={scores}
         score={scores.reduce((prev, current) => prev + current, 0)}
-        questionsForBack={questions}
       />
     );
   }

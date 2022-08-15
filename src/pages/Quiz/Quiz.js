@@ -4,8 +4,6 @@ import React, { useEffect, useState, useRef } from "react";
 import QuizPageHero from "../../components/QuizPageHero/QuizPageHero";
 import ScoredQuizSlides from "../../components/QuizSlides/ScoredQuizSlides";
 
-// TODO quiz back button functionality
-
 const Quiz = () => {
   const [scoredQuestions, setScoredQuestions] = useState([]);
   const [recQuestions, setRecQuestions] = useState([]);
@@ -37,7 +35,6 @@ const Quiz = () => {
         refProp={contentDivRef}
         questions={scoredQuestions}
         recQuestions={recQuestions}
-        sentFromBack={false}
       />
     </>
   );

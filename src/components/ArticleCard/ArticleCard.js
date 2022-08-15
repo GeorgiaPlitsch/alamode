@@ -13,7 +13,6 @@ const ArticleCard = (props) => {
       <Link to={`/articles/${articleId}`}>
         <h3 className="articleCard__title">{article.title}</h3>
       </Link>
-      {/* <p className="articles__article-description">{article.description}</p> */}
     </article>
   );
 };
