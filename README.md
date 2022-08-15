@@ -76,8 +76,7 @@ Start the server
 
 ## Screenshots
 
-![App Screenshot](./public/screenshot-home.png)
-![App Screenshot](./public/screenshot-checker.png)
+![App Screenshot](./public/screenshots.png)
 
 ## API Reference
 
